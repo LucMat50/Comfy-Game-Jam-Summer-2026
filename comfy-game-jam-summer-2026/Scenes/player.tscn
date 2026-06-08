@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bpqvb43q6v5oy"]
+
+[ext_resource type="Script" uid="uid://bnppb7wwmkeo8" path="res://Scripts/player.gd" id="1_v0iea"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_cvnsp"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6t5aa"]
+
+[node name="Player" type="CharacterBody3D" unique_id=381315849]
+script = ExtResource("1_v0iea")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=541031257]
+mesh = SubResource("CapsuleMesh_cvnsp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1454886898]
+shape = SubResource("CapsuleShape3D_6t5aa")
+
+[node name="Head" type="Node3D" parent="." unique_id=254438857]
+
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=908031571]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="sprint_reduce_timer" type="Timer" parent="." unique_id=307717587]
+
+[node name="sprint_regen_timer" type="Timer" parent="." unique_id=1426143635]
+
+[connection signal="timeout" from="sprint_reduce_timer" to="." method="_on_sprint_reduce_timer_timeout"]
+[connection signal="timeout" from="sprint_regen_timer" to="." method="_on_sprint_regen_timer_timeout"]
