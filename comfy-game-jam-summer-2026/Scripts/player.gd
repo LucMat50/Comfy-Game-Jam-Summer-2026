@@ -8,6 +8,10 @@ const SPRINT_SPEED = 8.0
 const JUMP_VELOCITY = 4.5
 const SENSITIVITY = 0.005
 
+var PATH_DIRECTION = Vector3(0 , 0, -1) #default path (forward)
+var isLocked = false
+var MAXIMUM_ANGLE_RANGE = 95.0
+
 const BOB_FREQ = 2.0
 const BOB_AMP = 0.08
 var t_bob = 0.0
@@ -51,6 +55,9 @@ func _process(_delta: float) -> void:
 			
 
 func _physics_process(delta):
+	
+	isFacingAway()
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
@@ -77,6 +84,7 @@ func _physics_process(delta):
 		# As good practice, you should replace UI actions with custom gameplay actions.
 		var input_dir = Input.get_vector("left", "right", "up", "down")
 		var direction = (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+		isHeadingAway(direction)
 		if is_on_floor():
 			if direction:
 				velocity.x = direction.x * speed
@@ -102,6 +110,36 @@ func _headbob(time) -> Vector3:
 	pos.y = sin(time*BOB_FREQ) * BOB_AMP
 	pos.x = cos(time * BOB_FREQ/2) * BOB_AMP
 	return pos
+	
+func lockMovement() -> void:
+	isLocked = true
+	
+func unlockMovement() -> void:
+	isLocked = false
+
+#rotates mesh and 
+func setForwadDirection(path_direction) -> void:
+	PATH_DIRECTION = path_direction
+
+#checks if player rotation is within range of boundary
+func isFacingAway() -> bool:
+	var head_direction = -head.transform.basis.z
+	var head_path_angle = rad_to_deg(PATH_DIRECTION.angle_to(head_direction)) 
+	if(head_path_angle >= MAXIMUM_ANGLE_RANGE):
+		print("Is facing away from path pointing towards:", PATH_DIRECTION, "cannot move at angle: ", head_path_angle)
+		return true
+	else:
+		return false
+		
+#checks is player is going to non intended path by checking input
+func isHeadingAway(movementDirection: Vector3) -> bool:
+	var movement_angle = rad_to_deg(PATH_DIRECTION.angle_to(movementDirection)) 
+	if(movement_angle >= MAXIMUM_ANGLE_RANGE):
+		print("Is heading away from path pointing towards: ", PATH_DIRECTION, "cannot move")
+		return true
+	else:
+		return false
+
 
 func _on_sprint_reduce_timer_timeout() -> void:
 	sprint_stamina = sprint_stamina - 0.05
