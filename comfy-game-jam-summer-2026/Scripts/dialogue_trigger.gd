@@ -4,14 +4,11 @@ extends Area3D
 var player = GameManager.player
 var trigger: bool = false
 
-func _physics_process(delta: float) -> void:
-	print(trigger)
-
 func _on_body_entered(body: Node3D) -> void:
-	if body == player:
-		trigger = true
+	if body.is_in_group("Player"):
+		print("player detected")
+		chud_talks()
 
-func _chud_talks():
-	if trigger == true:
-		Dialogic.start("TriggerTest")
-		trigger = false
+func chud_talks():
+	Dialogic.start("TriggerTest")
+	trigger = false
