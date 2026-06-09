@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cqvmeyalv7k8"]
 
 [ext_resource type="PackedScene" uid="uid://bpqvb43q6v5oy" path="res://Scenes/player.tscn" id="1_a02cp"]
+[ext_resource type="PackedScene" uid="uid://bj1isfnkyn77n" path="res://Scenes/dialogueTrigger.tscn" id="2_go701"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a02cp"]
 size = Vector3(50, 0.01, 50)
@@ -37,3 +38,6 @@ environment = SubResource("Environment_a02cp")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=355279647]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10719228, 1.429107, -3.0643475)
 mesh = SubResource("BoxMesh_a02cp")
+
+[node name="Area3D" parent="." unique_id=1087363247 instance=ExtResource("2_go701")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.78094447, -3.7634242)

@@ -33,6 +33,7 @@ var regen_stamina: bool = true
 
 
 func _ready():
+	GameManager.player = self
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	sprint_timer.wait_time = 0.01
 	sprint_regen_timer.wait_time = 4
