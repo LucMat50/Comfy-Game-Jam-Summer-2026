@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://cyb16r3omh1hr"]
+
+[ext_resource type="Texture2D" uid="uid://nh30qytew0qm" path="res://Assets/billboards/tree.webp" id="1_vnrek"]
+
+[node name="ForestTrees" type="Node3D" unique_id=429387930]
+
+[node name="Sprite3D2" type="Sprite3D" parent="." unique_id=1104276667]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.25, 10)
+billboard = 2
+texture = ExtResource("1_vnrek")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1451800952]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.25, 0)
+billboard = 2
+texture = ExtResource("1_vnrek")
+
+[node name="Sprite3D3" type="Sprite3D" parent="." unique_id=1060729021]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 4.25, 10)
+billboard = 2
+texture = ExtResource("1_vnrek")
+
+[node name="Sprite3D4" type="Sprite3D" parent="." unique_id=1750050290]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 4.25, 0)
+billboard = 2
+texture = ExtResource("1_vnrek")
+
+[node name="Sprite3D5" type="Sprite3D" parent="." unique_id=524006639]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 4.25, 10)
+billboard = 2
+texture = ExtResource("1_vnrek")
+
+[node name="Sprite3D6" type="Sprite3D" parent="." unique_id=1505066174]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 4.25, 0)
+billboard = 2
+texture = ExtResource("1_vnrek")
+
+[node name="Sprite3D7" type="Sprite3D" parent="." unique_id=1758377040]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 4.25, -10)
+billboard = 2
+texture = ExtResource("1_vnrek")
+
+[node name="Sprite3D8" type="Sprite3D" parent="." unique_id=881175403]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.25, -10)
+billboard = 2
+texture = ExtResource("1_vnrek")
+
+[node name="Sprite3D9" type="Sprite3D" parent="." unique_id=269454762]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 4.25, -10)
+billboard = 2
+texture = ExtResource("1_vnrek")
