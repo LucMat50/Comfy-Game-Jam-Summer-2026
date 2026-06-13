@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://bqonspxxp0k4s"]
+[gd_scene format=3 uid="uid://cxeuxto2ls2dc"]
 
-[ext_resource type="Script" uid="uid://bwj07x3pxcbgm" path="res://Scripts/MainMenu.gd" id="1_mjmdf"]
-[ext_resource type="Texture2D" uid="uid://nh30qytew0qm" path="res://Assets/billboards/tree.webp" id="2_72sra"]
+[ext_resource type="Script" uid="uid://buicknrwhg5vm" path="res://Scripts/PauseMenu.gd" id="1_n4i8v"]
+[ext_resource type="Texture2D" uid="uid://nh30qytew0qm" path="res://Assets/billboards/tree.webp" id="2_238ko"]
 
 [node name="PauseMenu" type="Control" unique_id=70648174]
 process_mode = 3
@@ -12,9 +12,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-script = ExtResource("1_mjmdf")
+script = ExtResource("1_n4i8v")
 
-[node name="Background" type="TextureRect" parent="." unique_id=1091041134]
+[node name="Background" type="ColorRect" parent="." unique_id=1451341813]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,8 +22,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+color = Color(0, 0, 0, 0.39215687)
 
-[node name="TitleContainer" type="MarginContainer" parent="." unique_id=1887410099]
+[node name="TitleContinaer" type="MarginContainer" parent="." unique_id=1887410099]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.27800003
@@ -38,7 +39,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Title" type="RichTextLabel" parent="TitleContainer" unique_id=1481800157]
+[node name="Title" type="RichTextLabel" parent="TitleContinaer" unique_id=1481800157]
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 70
@@ -63,19 +64,20 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_constants/separation = 50
 
-[node name="ResumeButton" type="TextureButton" parent="ButtonsContainer" unique_id=648130379]
+[node name="PlayButton" type="TextureButton" parent="ButtonsContainer" unique_id=648130379]
 custom_minimum_size = Vector2(200, 70)
 layout_mode = 2
-texture_normal = ExtResource("2_72sra")
+texture_normal = ExtResource("2_238ko")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="QuitButton" type="TextureButton" parent="ButtonsContainer" unique_id=376512847]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
-texture_normal = ExtResource("2_72sra")
+texture_normal = ExtResource("2_238ko")
 ignore_texture_size = true
 stretch_mode = 0
 
-[connection signal="pressed" from="ButtonsContainer/ResumeButton" to="." method="_on_play_button_pressed"]
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="pressed" from="ButtonsContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="ButtonsContainer/QuitButton" to="." method="_on_quit_button_pressed"]

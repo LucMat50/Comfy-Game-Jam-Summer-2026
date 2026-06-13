@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bpqvb43q6v5oy"]
 
 [ext_resource type="Script" uid="uid://bnppb7wwmkeo8" path="res://Scripts/player.gd" id="1_v0iea"]
+[ext_resource type="PackedScene" uid="uid://cxeuxto2ls2dc" path="res://Scenes/UI/PauseMenu.tscn" id="2_cvnsp"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_cvnsp"]
 
@@ -23,6 +24,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 [node name="sprint_reduce_timer" type="Timer" parent="." unique_id=307717587]
 
 [node name="sprint_regen_timer" type="Timer" parent="." unique_id=1426143635]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=18826428]
+
+[node name="PauseMenu" parent="CanvasLayer" unique_id=70648174 instance=ExtResource("2_cvnsp")]
+visible = false
 
 [connection signal="timeout" from="sprint_reduce_timer" to="." method="_on_sprint_reduce_timer_timeout"]
 [connection signal="timeout" from="sprint_regen_timer" to="." method="_on_sprint_regen_timer_timeout"]
