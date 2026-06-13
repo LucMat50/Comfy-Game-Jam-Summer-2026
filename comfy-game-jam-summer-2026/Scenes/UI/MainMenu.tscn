@@ -51,10 +51,10 @@ offset_bottom = 0.32000732
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-theme_override_constants/separation = 33
+theme_override_constants/separation = 50
 
 [node name="PlayButton" type="TextureButton" parent="ButtonsContainer" unique_id=648130379]
-custom_minimum_size = Vector2(0, 70)
+custom_minimum_size = Vector2(200, 70)
 layout_mode = 2
 texture_normal = ExtResource("2_72sra")
 ignore_texture_size = true
