@@ -1,8 +1,9 @@
 set {select} = false
 Chud: This is a dialogue test.
-Chud: testing... 1, 2, 3
+Chencho: testing... 1, 2, 3
 set {select} = true
 [style name="DefaultStyle"]
 Left or right?
 - Left
 - Right
+set {select} = false

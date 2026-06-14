@@ -76,6 +76,7 @@ glossary/default_case_sensitive=true
 variables={
 "select": false
 }
+animations/join_default="Fade In Up"
 
 [editor_plugins]
 
