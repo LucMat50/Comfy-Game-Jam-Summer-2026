@@ -23,14 +23,20 @@ GameManager="*uid://ddty7dnsgeexj"
 [dialogic]
 
 directories/dch_directory={
+"Chencho": "res://Dialogue/Characters/Chencho.dch",
 "Chud": "res://Dialogue/Characters/Chud.dch"
 }
 directories/dtl_directory={
 "TriggerTest": "res://Dialogue/Timelines/TriggerTest.dtl"
 }
-layout/style_directory={}
-layout/style_list=[]
-layout/default_style="Default"
+layout/style_directory={
+"": "res://Dialogue/Styles/ChenchoStyle.tres",
+"ChenchoStyle": "res://Dialogue/Styles/ChenchoStyle.tres",
+"ChudStyle": "res://Dialogue/Styles/ChudStyle.tres",
+"DefaultStyle": "res://Dialogue/Styles/DefaultStyle.tres"
+}
+layout/style_list=["res://Dialogue/Styles/ChenchoStyle.tres", "res://Dialogue/Styles/ChudStyle.tres", "res://Dialogue/Styles/DefaultStyle.tres"]
+layout/default_style="res://Dialogue/Styles/ChenchoStyle.tres"
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true

@@ -2,6 +2,7 @@ set {select} = false
 Chud: This is a dialogue test.
 Chud: testing... 1, 2, 3
 set {select} = true
-Chud: Left or right?
+[style name="DefaultStyle"]
+Left or right?
 - Left
 - Right
