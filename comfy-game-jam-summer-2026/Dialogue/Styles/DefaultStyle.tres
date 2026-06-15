@@ -16,7 +16,8 @@
 script = ExtResource("2_k1tcg")
 scene = ExtResource("1_7lf1g")
 overrides = {
-"global_bg_color": "Color(1, 1, 1, 1)"
+"global_bg_color": "Color(1, 1, 1, 1)",
+"global_font": "\"res://Dialogue/Jersey10-Regular.ttf\""
 }
 
 [sub_resource type="Resource" id="Resource_5eiii"]
@@ -57,6 +58,16 @@ scene = ExtResource("7_ypf8s")
 [sub_resource type="Resource" id="Resource_mdbtf"]
 script = ExtResource("2_k1tcg")
 scene = ExtResource("8_ujg5m")
+overrides = {
+"boxes_stylebox_normal": "\"res://Dialogue/Boxes/DefaultStyleBox.tres\"",
+"font_custom": "\"res://Dialogue/Jersey10-Regular.ttf\"",
+"font_size_custom": "25.0",
+"font_use_global": "false",
+"text_color_custom": "Color(0.42745098, 0.49803922, 0.6392157, 1)",
+"text_color_focused": "Color(0.15209998, 0.23140003, 0.39, 1)",
+"text_color_pressed": "Color(0.42745098, 0.49803922, 0.6392157, 1)",
+"text_color_use_global": "false"
+}
 
 [sub_resource type="Resource" id="Resource_w2xla"]
 script = ExtResource("2_k1tcg")
@@ -81,4 +92,4 @@ layer_info = {
 "16": SubResource("Resource_w2xla"),
 "17": SubResource("Resource_rrqtc")
 }
-metadata/_latest_layer = ""
+metadata/_latest_layer = "15"

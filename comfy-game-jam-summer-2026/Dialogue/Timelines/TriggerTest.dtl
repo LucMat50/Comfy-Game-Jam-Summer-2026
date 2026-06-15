@@ -4,6 +4,6 @@ Chencho: testing... 1, 2, 3
 set {select} = true
 [style name="DefaultStyle"]
 Left or right?
-- Left
-- Right
+- LEFT
+- RIGHT
 set {select} = false

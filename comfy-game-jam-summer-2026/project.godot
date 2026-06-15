@@ -76,7 +76,8 @@ glossary/default_case_sensitive=true
 variables={
 "select": false
 }
-animations/join_default="Fade In Up"
+animations/join_default="Instant In"
+animations/leave_default="Instant Out"
 
 [editor_plugins]
 
