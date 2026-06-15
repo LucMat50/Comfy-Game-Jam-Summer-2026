@@ -142,6 +142,9 @@ func isHeadingAway(player_direction: Vector3) -> bool:
 		return true
 	else:
 		return false
+		
+func setPlayerPath(path_direction: Vector3) -> void:
+	PATH_DIRECTION = path_direction
 
 func _on_sprint_reduce_timer_timeout() -> void:
 	sprint_stamina = sprint_stamina - 0.05
