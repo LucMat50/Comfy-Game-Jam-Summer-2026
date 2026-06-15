@@ -7,3 +7,4 @@ Left or right?
 - LEFT
 - RIGHT
 set {select} = false
+[signal arg="stateTest"]
