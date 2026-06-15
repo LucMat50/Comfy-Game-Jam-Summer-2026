@@ -10,7 +10,7 @@ const SENSITIVITY = 0.005
 
 var PATH_DIRECTION = Vector3(0 , 0, -1) #default path (forward)
 var isLocked = false
-var MAXIMUM_ANGLE_RANGE = 95.0
+var MAXIMUM_ANGLE_RANGE = 95.0 #controls range of movement in front of player
 
 const BOB_FREQ = 2.0
 const BOB_AMP = 0.08
@@ -57,8 +57,6 @@ func _process(_delta: float) -> void:
 
 func _physics_process(delta):
 	
-	isFacingAway()
-	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
@@ -85,7 +83,11 @@ func _physics_process(delta):
 		# As good practice, you should replace UI actions with custom gameplay actions.
 		var input_dir = Input.get_vector("left", "right", "up", "down")
 		var direction = (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-		isHeadingAway(direction)
+		
+		if isHeadingAway(direction) or Dialogic.VAR.select:
+			direction = Vector3(0,0,0).normalized() #freeze player if is heading away
+			
+		
 		if is_on_floor():
 			if direction:
 				velocity.x = direction.x * speed
@@ -132,15 +134,14 @@ func isFacingAway() -> bool:
 	else:
 		return false
 		
-#checks is player is going to non intended path by checking input
-func isHeadingAway(movementDirection: Vector3) -> bool:
-	var movement_angle = rad_to_deg(PATH_DIRECTION.angle_to(movementDirection)) 
+#checks if player is going away from path direction by checking input
+func isHeadingAway(player_direction: Vector3) -> bool:
+	var movement_angle = rad_to_deg(PATH_DIRECTION.angle_to(player_direction)) 
 	if(movement_angle >= MAXIMUM_ANGLE_RANGE):
 		print("Is heading away from path pointing towards: ", PATH_DIRECTION, "cannot move")
 		return true
 	else:
 		return false
-
 
 func _on_sprint_reduce_timer_timeout() -> void:
 	sprint_stamina = sprint_stamina - 0.05
