@@ -8,7 +8,6 @@ CHOOSE A PATH
 	do StateManager.updateState("trail1GoLeft")
 - Right
 	do StateManager.updateState("trail1GoRight")
-[wait time="2.0"]
 do StateManager.checkState("trail1GoLeft")
 if {stateTemp} == true:
 	Chencho (Default): Man, this trail’s lookin good.

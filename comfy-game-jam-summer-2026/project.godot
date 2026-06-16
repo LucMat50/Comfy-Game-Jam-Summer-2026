@@ -30,7 +30,8 @@ directories/dch_directory={
 directories/dtl_directory={
 "TriggerTest": "res://Dialogue/Timelines/TriggerTest.dtl",
 "opening": "res://Dialogue/Timelines/opening.dtl",
-"trail1": "res://Dialogue/Timelines/trail1.dtl"
+"trail1": "res://Dialogue/Timelines/trail1.dtl",
+"trail2": "res://Dialogue/Timelines/trail2.dtl"
 }
 layout/style_directory={
 "": "res://Dialogue/Styles/ChenchoStyle.tres",

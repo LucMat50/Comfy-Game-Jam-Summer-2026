@@ -5,7 +5,9 @@ var state_list = {
 	"testGoRight" : false,
 	"trail1GoLeft" : false,
 	"trail1GoRight" : false,
-	"turnedAround" : false
+	"turnedAround" : false,
+	"trail2GoLeft" : false,
+	"trail2GoRight" : false
 }
 
 var checkStatePersistently : bool = false
