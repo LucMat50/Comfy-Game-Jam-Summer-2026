@@ -5,6 +5,13 @@ set {select} = true
 [style name="DefaultStyle"]
 Left or right?
 - LEFT
+	do StateManager.updateState("testGoLeft")
 - RIGHT
+	do StateManager.updateState("testGoRight")
 set {select} = false
-[signal arg="stateTest"]
+do StateManager.checkState("testGoLeft")
+if {stateTemp} == true:
+	Went left.
+do StateManager.checkState("testGoRight")
+if {stateTemp} == true:
+	Went right.

@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Dialogic="*uid://ds2q0uclmolvu"
 GameManager="*uid://ddty7dnsgeexj"
+StateManager="*uid://cfhio6ihmrral"
 
 [dialogic]
 
@@ -74,7 +75,8 @@ audio/channel_defaults={
 }
 glossary/default_case_sensitive=true
 variables={
-"select": false
+"select": false,
+"stateTemp": false
 }
 animations/join_default="Instant In"
 animations/leave_default="Instant Out"
