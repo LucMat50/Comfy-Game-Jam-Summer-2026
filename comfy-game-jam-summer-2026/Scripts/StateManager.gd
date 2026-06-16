@@ -2,7 +2,9 @@ extends Node
 
 var state_list = {
 	"testGoLeft" : false,
-	"testGoRight" : false
+	"testGoRight" : false,
+	"trail1GoLeft" : false,
+	"trail1GoRight" : false
 }
 
 func updateState(state : String):
