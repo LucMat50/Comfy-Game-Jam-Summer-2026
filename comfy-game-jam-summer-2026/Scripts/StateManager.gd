@@ -14,3 +14,10 @@ func _receive_state_update(state : String):
 	else:
 		state_list.set(state, true)
 		
+func checkState(state : String) -> bool:
+	var key_search_result = state_list.get(state)
+	if key_search_result == null:
+		return false
+	else:
+		return key_search_result
+		
