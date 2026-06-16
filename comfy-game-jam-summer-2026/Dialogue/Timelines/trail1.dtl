@@ -21,6 +21,6 @@ if {stateTemp} == true:
 	Chud (Angry): Bro, I said right as in 'you’re correct'. Go left.
 	Chencho (Tired): Oh.
 	Chud (Eyebrow): Just turn around.
-	# do some kind of check for turnaround here
+	do StateManager.startPersistentStateCheck("turnedAround")
 	Chencho (Tired): Uh… doesn’t seem like I can.
 	Chud (Worried): It’s fine, there’s another intersection up ahead.
