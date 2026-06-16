@@ -1,6 +1,6 @@
 set {select} = false
-Chud: This is a dialogue test.
-Chencho: testing... 1, 2, 3
+Chencho (Default): This is a dialogue test.
+Chud (Default): testing... 1, 2, 3
 set {select} = true
 [style name="DefaultStyle"]
 Left or right?

@@ -78,8 +78,8 @@ variables={
 "select": false,
 "stateTemp": false
 }
-animations/join_default="Instant In"
-animations/leave_default="Instant Out"
+animations/join_default="Bounce In"
+animations/leave_default="Bounce Out"
 
 [editor_plugins]
 
