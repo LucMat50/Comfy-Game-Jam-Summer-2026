@@ -8,7 +8,7 @@ const SPRINT_SPEED = 8.0
 const JUMP_VELOCITY = 4.5
 const SENSITIVITY = 0.005
 
-var PATH_DIRECTION = Vector3(0 , 0, -1) #default path (forward)
+@export var PATH_DIRECTION = Vector3(0 , 0, -1) #default path (forward)
 var isLocked = false
 var MAXIMUM_ANGLE_RANGE = 95.0 #controls range of movement in front of player
 
