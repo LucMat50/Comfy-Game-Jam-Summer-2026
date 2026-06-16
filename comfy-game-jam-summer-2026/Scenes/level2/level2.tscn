@@ -20,6 +20,8 @@ sky_material = SubResource("ProceduralSkyMaterial_aeirk")
 background_mode = 2
 sky = SubResource("Sky_yneoy")
 
+[sub_resource type="BoxMesh" id="BoxMesh_vakma"]
+
 [sub_resource type="Gradient" id="Gradient_4hmhb"]
 offsets = PackedFloat32Array(0.2, 1)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
@@ -96,8 +98,6 @@ normal_texture = ExtResource("4_vakma")
 mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_7qrwx")])
 texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_00x12"), SubResource("Terrain3DTextureAsset_yklva")])
 
-[sub_resource type="BoxMesh" id="BoxMesh_vakma"]
-
 [node name="Level2" type="Node3D" unique_id=787361978]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1941029692]
@@ -106,6 +106,10 @@ environment = SubResource("Environment_npbiu")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1948180241]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 422, 0)
 shadow_enabled = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1777194948]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 521.3152, -1.5258789e-05, 545.4563)
+mesh = SubResource("BoxMesh_vakma")
 
 [node name="Player" parent="." unique_id=381315849 instance=ExtResource("1_4hmhb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.0158615, 0.9999924, 93.252106)
@@ -433,7 +437,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 151.56529, 80.620544, 98.4452
 
 [node name="AssortedGrass5" parent="grass" unique_id=626961397 instance=ExtResource("6_yklva")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 184.35197, 80.620544, 128.70218)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1777194948]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 521.3152, -1.5258789e-05, 545.4563)
-mesh = SubResource("BoxMesh_vakma")
