@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cyb16r3omh1hr"]
 
-[ext_resource type="Texture2D" uid="uid://nh30qytew0qm" path="res://Assets/billboards/tree.webp" id="1_vnrek"]
+[ext_resource type="Texture2D" uid="uid://nh30qytew0qm" path="res://Assets/billboards/trees/tree.webp" id="1_vnrek"]
 
 [node name="ForestTrees" type="Node3D" unique_id=429387930]
 

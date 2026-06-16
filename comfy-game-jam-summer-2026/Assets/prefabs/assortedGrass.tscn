@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://crh56rx067nig"]
+
+[ext_resource type="Texture2D" uid="uid://dw0utfct11nww" path="res://Assets/billboards/trees/goodTrees/GoodTree1.webp" id="1_7se1l"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cdbrt"]
+
+[node name="AssortedGrass" type="Node3D" unique_id=219442173]
+
+[node name="GoodTree1" type="CharacterBody3D" parent="." unique_id=687786381]
+
+[node name="Sprite3D" type="Sprite3D" parent="GoodTree1" unique_id=879127834]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+texture = ExtResource("1_7se1l")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GoodTree1" unique_id=919886072]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_cdbrt")
