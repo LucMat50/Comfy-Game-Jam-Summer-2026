@@ -33,9 +33,12 @@ directories/dtl_directory={
 "trail1left": "res://Dialogue/Timelines/trail1left.dtl",
 "trail1opening": "res://Dialogue/Timelines/trail1opening.dtl",
 "trail1right": "res://Dialogue/Timelines/trail1right.dtl",
-"trail2": "res://Dialogue/Timelines/trail2opening.dtl",
 "trail2left": "res://Dialogue/Timelines/trail2left.dtl",
-"trail2right": "res://Dialogue/Timelines/trail2right.dtl"
+"trail2opening": "res://Dialogue/Timelines/trail2opening.dtl",
+"trail2right": "res://Dialogue/Timelines/trail2right.dtl",
+"trail3left": "res://Dialogue/Timelines/trail3left.dtl",
+"trail3opening": "res://Dialogue/Timelines/trail3opening.dtl",
+"trail3right": "res://Dialogue/Timelines/trail3right.dtl"
 }
 layout/style_directory={
 "": "res://Dialogue/Styles/ChenchoStyle.tres",
