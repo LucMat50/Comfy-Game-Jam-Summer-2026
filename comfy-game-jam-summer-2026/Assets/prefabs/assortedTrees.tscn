@@ -1,0 +1,205 @@
+[gd_scene format=3 uid="uid://dt2uiveg7aevj"]
+
+[ext_resource type="Texture2D" uid="uid://dw0utfct11nww" path="res://Assets/billboards/trees/goodTrees/GoodTree1.webp" id="1_4ruto"]
+[ext_resource type="Script" uid="uid://dwj55e3rdxjie" path="res://Scripts/dropThings.gd" id="1_cudgo"]
+[ext_resource type="Texture2D" uid="uid://fxe0dtab28ak" path="res://Assets/billboards/trees/goodTrees/GoodTree2.png" id="2_ni0wx"]
+[ext_resource type="Texture2D" uid="uid://dxpye610i2t8" path="res://Assets/billboards/trees/goodTrees/GoodTree3.webp" id="3_wgoj6"]
+[ext_resource type="Texture2D" uid="uid://cfe5ul7i3oer4" path="res://Assets/billboards/trees/goodTrees/GoodTree4.png" id="4_mdxvy"]
+[ext_resource type="Texture2D" uid="uid://bjecvqunr72i4" path="res://Assets/billboards/trees/goodTrees/GoodTree5.png" id="5_mmasq"]
+[ext_resource type="Texture2D" uid="uid://dfvc7gtm2ell3" path="res://Assets/billboards/trees/goodTrees/GoodTree6.png" id="6_h8bwv"]
+[ext_resource type="Texture2D" uid="uid://ok5hmeqx56oq" path="res://Assets/billboards/trees/goodTrees/GoodTree7.webp" id="7_cudgo"]
+[ext_resource type="Texture2D" uid="uid://dnk20nhmaaahq" path="res://Assets/billboards/trees/goodTrees/tree.png" id="8_a01p5"]
+
+[node name="AssortedTrees" type="Node3D" unique_id=350584096]
+script = ExtResource("1_cudgo")
+
+[node name="GoodTree1" type="Node3D" parent="." unique_id=397304601]
+
+[node name="Sprite3D" type="Sprite3D" parent="GoodTree1" unique_id=776908985]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+billboard = 2
+texture = ExtResource("1_4ruto")
+
+[node name="GoodTree2" type="Node3D" parent="." unique_id=962613022]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -11)
+
+[node name="Sprite3D" type="Sprite3D" parent="GoodTree2" unique_id=1574554167]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+billboard = 2
+texture = ExtResource("1_4ruto")
+
+[node name="GoodTree3" type="Node3D" parent="." unique_id=1402966991]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 8)
+
+[node name="Sprite3D" type="Sprite3D" parent="GoodTree3" unique_id=1620004997]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+billboard = 2
+texture = ExtResource("1_4ruto")
+
+[node name="GoodTree4" type="Node3D" parent="." unique_id=1553456882]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -3)
+
+[node name="Sprite3D" type="Sprite3D" parent="GoodTree4" unique_id=1882793560]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+billboard = 2
+texture = ExtResource("2_ni0wx")
+
+[node name="GoodTree5" type="Node3D" parent="." unique_id=1593314853]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 6)
+
+[node name="Sprite3D" type="Sprite3D" parent="GoodTree5" unique_id=1778822395]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+billboard = 2
+texture = ExtResource("2_ni0wx")
+
+[node name="GoodTree6" type="Node3D" parent="." unique_id=157256749]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 2)
+
+[node name="Sprite3D" type="Sprite3D" parent="GoodTree6" unique_id=825610442]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+billboard = 2
+texture = ExtResource("2_ni0wx")
+
+[node name="GoodTree7" type="Node3D" parent="." unique_id=1952382780]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 4)
+
+[node name="Sprite3D" type="Sprite3D" parent="GoodTree7" unique_id=687690007]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+billboard = 2
+texture = ExtResource("3_wgoj6")
+
+[node name="GoodTree8" type="Node3D" parent="." unique_id=882737961]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -5)
+
+[node name="Sprite3D" type="Sprite3D" parent="GoodTree8" unique_id=787319024]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+billboard = 2
+texture = ExtResource("3_wgoj6")
+
+[node name="GoodTree9" type="Node3D" parent="." unique_id=1253495729]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -3)
+
+[node name="Sprite3D" type="Sprite3D" parent="GoodTree9" unique_id=772603342]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+billboard = 2
+texture = ExtResource("3_wgoj6")
+
+[node name="GoodTree10" type="Node3D" parent="." unique_id=980971631]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -9)
+
+[node name="Sprite3D" type="Sprite3D" parent="GoodTree10" unique_id=1114233046]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+billboard = 2
+texture = ExtResource("4_mdxvy")
+
+[node name="GoodTree11" type="Node3D" parent="." unique_id=558446062]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -7)
+
+[node name="Sprite3D" type="Sprite3D" parent="GoodTree11" unique_id=1079216894]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+billboard = 2
+texture = ExtResource("4_mdxvy")
+
+[node name="GoodTree12" type="Node3D" parent="." unique_id=817254414]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 9)
+
+[node name="Sprite3D" type="Sprite3D" parent="GoodTree12" unique_id=1039593417]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+billboard = 2
+texture = ExtResource("4_mdxvy")
+
+[node name="GoodTree13" type="Node3D" parent="." unique_id=1408978139]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -14)
+
+[node name="Sprite3D" type="Sprite3D" parent="GoodTree13" unique_id=301105232]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+billboard = 2
+texture = ExtResource("5_mmasq")
+
+[node name="GoodTree14" type="Node3D" parent="." unique_id=1803914729]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -3)
+
+[node name="Sprite3D" type="Sprite3D" parent="GoodTree14" unique_id=245294332]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+billboard = 2
+texture = ExtResource("5_mmasq")
+
+[node name="GoodTree15" type="Node3D" parent="." unique_id=696151668]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 4)
+
+[node name="Sprite3D" type="Sprite3D" parent="GoodTree15" unique_id=1949063549]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+billboard = 2
+texture = ExtResource("5_mmasq")
+
+[node name="GoodTree16" type="Node3D" parent="." unique_id=857109447]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 9)
+
+[node name="Sprite3D" type="Sprite3D" parent="GoodTree16" unique_id=1922789588]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+billboard = 2
+texture = ExtResource("6_h8bwv")
+
+[node name="GoodTree17" type="Node3D" parent="." unique_id=1049419998]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -1)
+
+[node name="Sprite3D" type="Sprite3D" parent="GoodTree17" unique_id=300595866]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+billboard = 2
+texture = ExtResource("6_h8bwv")
+
+[node name="GoodTree18" type="Node3D" parent="." unique_id=933730818]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -9)
+
+[node name="Sprite3D" type="Sprite3D" parent="GoodTree18" unique_id=1403959526]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+billboard = 2
+texture = ExtResource("6_h8bwv")
+
+[node name="GoodTree19" type="Node3D" parent="." unique_id=751532701]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -10)
+
+[node name="Sprite3D" type="Sprite3D" parent="GoodTree19" unique_id=1614096416]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+billboard = 2
+texture = ExtResource("7_cudgo")
+
+[node name="GoodTree20" type="Node3D" parent="." unique_id=935911127]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 7)
+
+[node name="Sprite3D" type="Sprite3D" parent="GoodTree20" unique_id=354621196]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+billboard = 2
+texture = ExtResource("7_cudgo")
+
+[node name="GoodTree21" type="Node3D" parent="." unique_id=1758302386]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -13)
+
+[node name="Sprite3D" type="Sprite3D" parent="GoodTree21" unique_id=165309353]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+billboard = 2
+texture = ExtResource("7_cudgo")
+
+[node name="GoodTree22" type="Node3D" parent="." unique_id=544349386]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 2)
+
+[node name="Sprite3D" type="Sprite3D" parent="GoodTree22" unique_id=1354788137]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+billboard = 2
+texture = ExtResource("8_a01p5")
+
+[node name="GoodTree23" type="Node3D" parent="." unique_id=2004248607]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -10)
+
+[node name="Sprite3D" type="Sprite3D" parent="GoodTree23" unique_id=1575558171]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+billboard = 2
+texture = ExtResource("8_a01p5")
+
+[node name="GoodTree24" type="Node3D" parent="." unique_id=1464767447]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="GoodTree24" unique_id=1923829178]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+billboard = 2
+texture = ExtResource("8_a01p5")
