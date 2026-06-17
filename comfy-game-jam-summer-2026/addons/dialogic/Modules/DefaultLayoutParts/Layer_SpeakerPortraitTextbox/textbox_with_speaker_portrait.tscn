@@ -65,6 +65,7 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_hywg0")
 
 [node name="PortraitBackgroundColor" type="ColorRect" parent="Anchor/Panel/HBox/PortraitPanel" unique_id=216123151]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -76,14 +77,17 @@ offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0.60784316, 0.60784316, 0.60784316, 0)
+color = Color(0.60784316, 0.60784316, 0.5137255, 0.21176471)
 
-[node name="DialogicNode_PortraitContainer" type="Control" parent="Anchor/Panel/HBox/PortraitPanel/PortraitBackgroundColor" unique_id=927358813]
+[node name="DialogicNode_PortraitContainer" type="Control" parent="Anchor/Panel/HBox/PortraitPanel" unique_id=927358813]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 4.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 3.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2

@@ -1,6 +1,7 @@
 set {select} = false
 Chencho (Default): This is a dialogue test.
 Chud (Default): testing... 1, 2, 3
+[wait time="0.5"]
 set {select} = true
 [style name="DefaultStyle"]
 Left or right?
