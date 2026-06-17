@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bpqvb43q6v5oy"]
 
 [ext_resource type="Script" uid="uid://bnppb7wwmkeo8" path="res://Scripts/player.gd" id="1_v0iea"]
+[ext_resource type="PackedScene" uid="uid://da6wmoqgbbscx" path="res://Scenes/hands.tscn" id="2_6t5aa"]
 [ext_resource type="Script" uid="uid://cfhio6ihmrral" path="res://Scripts/StateManager.gd" id="2_cvnsp"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_cvnsp"]
@@ -20,6 +21,8 @@ shape = SubResource("CapsuleShape3D_6t5aa")
 
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=908031571]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="Hands" parent="Head/Camera3D" unique_id=1907286286 instance=ExtResource("2_6t5aa")]
 
 [node name="sprint_reduce_timer" type="Timer" parent="." unique_id=307717587]
 
