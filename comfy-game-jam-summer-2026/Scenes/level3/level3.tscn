@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://buvnt6r5fsoi0" path="res://demo/assets/textures/GoodGrass.png" id="2_fbmh2"]
 [ext_resource type="Texture2D" uid="uid://c88j3oj0lf6om" path="res://demo/assets/textures/rock023_alb_ht.png" id="3_g1lxn"]
 [ext_resource type="Texture2D" uid="uid://c307hdmos4gtm" path="res://demo/assets/textures/rock023_nrm_rgh.png" id="4_ltjoi"]
+[ext_resource type="PackedScene" uid="uid://dt2uiveg7aevj" path="res://Assets/prefabs/assortedTrees.tscn" id="5_ltjoi"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_g1lxn"]
 sky_top_color = Color(0.28645808, 0.45285547, 0.68526036, 1)
@@ -118,8 +119,226 @@ data_directory = "res://Scenes/level3"
 material = SubResource("Terrain3DMaterial_a51kk")
 assets = SubResource("Terrain3DAssets_45e7a")
 show_grid = true
+collision_mode = 3
 collision_shape_size = 64
 collision_radius = 256
 show_region_grid = true
 top_level = true
 metadata/_edit_lock_ = true
+
+[node name="trees" type="Node3D" parent="." unique_id=1032567382]
+
+[node name="AssortedTrees" parent="trees" unique_id=350584096 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 103, 18)
+
+[node name="AssortedTrees48" parent="trees" unique_id=1890594165 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 103, 45)
+
+[node name="AssortedTrees49" parent="trees" unique_id=525485083 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49, 103, 215)
+
+[node name="AssortedTrees50" parent="trees" unique_id=875990299 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49, 103, 242)
+
+[node name="AssortedTrees51" parent="trees" unique_id=2096811498 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61, 103, 166)
+
+[node name="AssortedTrees52" parent="trees" unique_id=1063359295 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61, 103, 193)
+
+[node name="AssortedTrees53" parent="trees" unique_id=921350731 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 103, 120)
+
+[node name="AssortedTrees54" parent="trees" unique_id=688331992 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 103, 147)
+
+[node name="AssortedTrees55" parent="trees" unique_id=870855985 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 103, 79)
+
+[node name="AssortedTrees56" parent="trees" unique_id=1598715753 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 103, 106)
+
+[node name="AssortedTrees57" parent="trees" unique_id=1622065064 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88, 103, 117)
+
+[node name="AssortedTrees58" parent="trees" unique_id=171579413 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88, 103, 144)
+
+[node name="AssortedTrees59" parent="trees" unique_id=423496074 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 103, 103, 150)
+
+[node name="AssortedTrees60" parent="trees" unique_id=1745859623 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 103, 103, 177)
+
+[node name="AssortedTrees61" parent="trees" unique_id=2118036840 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 83, 103, 166)
+
+[node name="AssortedTrees62" parent="trees" unique_id=140969346 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 83, 103, 193)
+
+[node name="AssortedTrees63" parent="trees" unique_id=587101280 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70, 103, 213)
+
+[node name="AssortedTrees64" parent="trees" unique_id=1169779215 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70, 103, 240)
+
+[node name="AssortedTrees65" parent="trees" unique_id=1786071379 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 94, 103, 213)
+
+[node name="AssortedTrees66" parent="trees" unique_id=1214116338 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 94, 103, 240)
+
+[node name="AssortedTrees67" parent="trees" unique_id=1167834455 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119, 103, 211)
+
+[node name="AssortedTrees68" parent="trees" unique_id=395346035 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119, 103, 238)
+
+[node name="AssortedTrees69" parent="trees" unique_id=253417079 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 144.5, 103, 227.5)
+
+[node name="AssortedTrees70" parent="trees" unique_id=661283349 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 171.5, 103, 227.5)
+
+[node name="AssortedTrees71" parent="trees" unique_id=160005814 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(0.49999997, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, 0.49999997, 135.5, 103, 210.5)
+
+[node name="AssortedTrees2" parent="trees" unique_id=683958451 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 95, 103, 20)
+
+[node name="AssortedTrees3" parent="trees" unique_id=858960332 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 107, 103, 42)
+
+[node name="AssortedTrees4" parent="trees" unique_id=176154086 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 120, 103, 65)
+
+[node name="AssortedTrees5" parent="trees" unique_id=662579218 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 132, 103, 88)
+
+[node name="AssortedTrees6" parent="trees" unique_id=837339684 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 141, 103, 113)
+
+[node name="AssortedTrees7" parent="trees" unique_id=789640775 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 149, 103, 142)
+
+[node name="AssortedTrees8" parent="trees" unique_id=1658688532 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 156, 103, 164)
+
+[node name="AssortedTrees9" parent="trees" unique_id=1448495211 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 178, 103, 174)
+
+[node name="AssortedTrees10" parent="trees" unique_id=1033195007 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 196, 103, 158)
+
+[node name="AssortedTrees11" parent="trees" unique_id=550537711 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 216, 103, 144)
+
+[node name="AssortedTrees12" parent="trees" unique_id=1350114761 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 236, 103, 141)
+
+[node name="AssortedTrees13" parent="trees" unique_id=856186000 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 238, 103, 182)
+
+[node name="AssortedTrees14" parent="trees" unique_id=1370809105 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 238, 103, 212)
+
+[node name="AssortedTrees15" parent="trees" unique_id=849149474 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 176, 103, 139)
+
+[node name="AssortedTrees16" parent="trees" unique_id=156859603 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 198, 103, 127)
+
+[node name="AssortedTrees17" parent="trees" unique_id=1580352261 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 220, 103, 115)
+
+[node name="AssortedTrees18" parent="trees" unique_id=1916031368 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 240, 103, 115)
+
+[node name="AssortedTrees19" parent="trees" unique_id=206420938 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 179, 103, 130)
+
+[node name="AssortedTrees20" parent="trees" unique_id=1840148453 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 196, 103, 99)
+
+[node name="AssortedTrees21" parent="trees" unique_id=1558418425 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 218, 103, 87)
+
+[node name="AssortedTrees22" parent="trees" unique_id=1528331111 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 238, 103, 87)
+
+[node name="AssortedTrees23" parent="trees" unique_id=2086311066 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 177, 103, 102)
+
+[node name="AssortedTrees24" parent="trees" unique_id=78000258 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 192, 103, 72)
+
+[node name="AssortedTrees25" parent="trees" unique_id=411178638 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 214, 103, 60)
+
+[node name="AssortedTrees26" parent="trees" unique_id=1938737406 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 234, 103, 60)
+
+[node name="AssortedTrees27" parent="trees" unique_id=203995689 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 173, 103, 75)
+
+[node name="AssortedTrees28" parent="trees" unique_id=290757534 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 191, 103, 44)
+
+[node name="AssortedTrees29" parent="trees" unique_id=1741539174 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 213, 103, 32)
+
+[node name="AssortedTrees30" parent="trees" unique_id=1301390618 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 233, 103, 32)
+
+[node name="AssortedTrees31" parent="trees" unique_id=1742951989 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 172, 103, 47)
+
+[node name="AssortedTrees32" parent="trees" unique_id=1701440922 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 191, 103, 35)
+
+[node name="AssortedTrees33" parent="trees" unique_id=858912131 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 213, 103, 23)
+
+[node name="AssortedTrees34" parent="trees" unique_id=1048110383 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 233, 103, 23)
+
+[node name="AssortedTrees35" parent="trees" unique_id=1391243621 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 172, 103, 38)
+
+[node name="AssortedTrees36" parent="trees" unique_id=1500562859 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 160.5, 103, 106)
+
+[node name="AssortedTrees37" parent="trees" unique_id=1454935414 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 148.5, 103, 84)
+
+[node name="AssortedTrees38" parent="trees" unique_id=693998584 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 148.5, 103, 64)
+
+[node name="AssortedTrees39" parent="trees" unique_id=1341253093 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 163.5, 103, 125)
+
+[node name="AssortedTrees40" parent="trees" unique_id=1126885823 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 133.5, 103, 59)
+
+[node name="AssortedTrees41" parent="trees" unique_id=6064295 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 121.5, 103, 37)
+
+[node name="AssortedTrees42" parent="trees" unique_id=956923253 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 121.5, 103, 17)
+
+[node name="AssortedTrees44" parent="trees" unique_id=721660727 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 146.5, 103, 40)
+
+[node name="AssortedTrees43" parent="trees" unique_id=94681222 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 136.5, 103, 78)
+
+[node name="AssortedTrees45" parent="trees" unique_id=493828536 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 167.5, 103, 17)
+
+[node name="AssortedTrees46" parent="trees" unique_id=1335117954 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 143.5, 103, 16)
+
+[node name="AssortedTrees47" parent="trees" unique_id=1470998103 instance=ExtResource("5_ltjoi")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 191.5, 103, 16)
+
+[node name="grass" type="Node3D" parent="." unique_id=178528316]
