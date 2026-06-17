@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://da6wmoqgbbscx"]
+
+[ext_resource type="Script" uid="uid://broyosjjppj5m" path="res://Scripts/hands.gd" id="1_s8rny"]
+[ext_resource type="Texture2D" uid="uid://b8f861ktulm1p" path="res://Assets/Hands.png" id="1_xhkl4"]
+
+[sub_resource type="Animation" id="Animation_s8rny"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(558, 770)]
+}
+
+[sub_resource type="Animation" id="Animation_bupjd"]
+resource_name = "deploy"
+length = 0.3750125
+step = 0.125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.375),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(558, 770), Vector2(558, 588), Vector2(558, 266), Vector2(558, 275)]
+}
+
+[sub_resource type="Animation" id="Animation_pciih"]
+resource_name = "idle"
+length = 0.3750125
+loop_mode = 1
+step = 0.125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(558, 275), Vector2(558, 265)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lu2tt"]
+_data = {
+&"RESET": SubResource("Animation_s8rny"),
+&"deploy": SubResource("Animation_bupjd"),
+&"idle": SubResource("Animation_pciih")
+}
+
+[node name="Hands" type="CanvasLayer" unique_id=1907286286]
+script = ExtResource("1_s8rny")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1709346430]
+position = Vector2(558, 770)
+texture = ExtResource("1_xhkl4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D" unique_id=1570664998]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_lu2tt")

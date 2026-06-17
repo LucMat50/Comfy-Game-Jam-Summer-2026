@@ -1,0 +1,29 @@
+[style name="DefaultStyle"]
+*ring *ring*
+do StateManager.checkState("trail2GoRight")
+if {stateTemp} == true:
+	Chencho (Default): Ok, I think this is the last stretch. Which way should I go?
+	Chud (Default): Seems to me you're supposed to take another right this time.
+	do StateManager.checkState("trail1GoRight")
+	if {stateTemp} == true:
+		Chencho (Upset): Are you sure? Don’t wanna end up somewhere else like the first time.s
+		Chud (Angry): Oh come on, I am most positive this is the right way to go.
+		Chencho (Tired): Whatever you say buddy.
+	else:
+		Chencho (Happy): Alrighty, See you soon!
+do StateManager.checkState("trail2GoLeft")
+if {stateTemp} == true:
+	Chencho (Tired): Please don’t mess up this time.
+	Chud (Angry): Oh come on, when have I messed up?
+	do StateManager.checkState("trail1GoLeft")
+	if {stateTemp} == true:
+		Chencho (Tired): One time.
+		Chud (Eyebrow): Ya see, only once. An eeny teensy one time. After all, I am most positive this is the right way to go.
+		Chencho (Tired): Hrmm… Alright, I’ll be there in a sec.
+	else:
+		Chencho (Upset): Twice. You’ve messed up twice.
+		Chud (Eyebrow): Nuh uh.
+		Chencho (Tired): Yuh huh.
+		Chud (Eyebrow): Nuh uh.
+		Chencho (Upset): Yuh huh.
+		Chud (Angry): Fine, don’t listen to me then.
