@@ -23,6 +23,7 @@ var gravity = 9.8
 
 @onready var head  = $Head
 @onready var camera = $Head/Camera3D
+@onready var footsteps: AudioStreamPlayer3D = $Footsteps
 
 @onready var sprint_timer = $sprint_reduce_timer
 @onready var sprint_regen_timer = $sprint_regen_timer
@@ -37,6 +38,7 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	sprint_timer.wait_time = 0.01
 	sprint_regen_timer.wait_time = 4
+	footsteps.volume_db = -50.0
 
 func _unhandled_input(event):
 	if can_accept_input and event is InputEventMouseMotion:
@@ -46,7 +48,6 @@ func _unhandled_input(event):
 
 func _process(_delta: float) -> void:
 	#$"Head/Camera3D/SubViewport/HUD/Bottom HUD/Control/Sprint_Bar".value = sprint_stamina
-
 	#Handles regenerating stamina
 	if regen_stamina:
 		sprint_stamina += 0.2
@@ -80,8 +81,16 @@ func _physics_process(delta):
 			speed = WALK_SPEED
 
 		# Get the input direction and handle the movement/deceleration.
-		# As good practice, you should replace UI actions with custom gameplay actions.
 		var input_dir = Input.get_vector("left", "right", "up", "down")
+		
+		#Footstep audio
+		var is_walking = input_dir != Vector2.ZERO and is_on_floor()
+		if is_walking:
+			if !footsteps.playing:
+				footsteps.play()
+		else:
+			if footsteps.playing:
+				footsteps.stop()
 		var direction = (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		
 		if isHeadingAway(direction) or Dialogic.VAR.select:
@@ -107,6 +116,7 @@ func _physics_process(delta):
 		camera.fov = lerp(camera.fov, target_fov, delta * 8.0)
 		
 		move_and_slide()
+	
 
 func _headbob(time) -> Vector3:
 	var pos = Vector3.ZERO

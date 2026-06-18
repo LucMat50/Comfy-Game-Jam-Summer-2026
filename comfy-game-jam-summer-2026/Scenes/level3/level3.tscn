@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bpqvb43q6v5oy" path="res://Scenes/player.tscn" id="1_av1ei"]
 [ext_resource type="Texture2D" uid="uid://buvnt6r5fsoi0" path="res://demo/assets/textures/GoodGrass.png" id="2_fbmh2"]
-[ext_resource type="Texture2D" uid="uid://c88j3oj0lf6om" path="res://demo/assets/textures/rock023_alb_ht.png" id="3_g1lxn"]
+[ext_resource type="Texture2D" uid="uid://ds7lqxhkc1ip" path="res://demo/assets/textures/GoodPath.png" id="3_671qh"]
 [ext_resource type="Texture2D" uid="uid://c307hdmos4gtm" path="res://demo/assets/textures/rock023_nrm_rgh.png" id="4_ltjoi"]
 [ext_resource type="PackedScene" uid="uid://dt2uiveg7aevj" path="res://Assets/prefabs/assortedTrees.tscn" id="5_ltjoi"]
 [ext_resource type="PackedScene" uid="uid://crh56rx067nig" path="res://Assets/prefabs/assortedGrass.tscn" id="6_671qh"]
@@ -91,7 +91,7 @@ normal_texture = ExtResource("2_fbmh2")
 [sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_671qh"]
 name = ""
 id = 1
-albedo_texture = ExtResource("3_g1lxn")
+albedo_texture = ExtResource("3_671qh")
 normal_texture = ExtResource("4_ltjoi")
 
 [sub_resource type="Terrain3DAssets" id="Terrain3DAssets_45e7a"]
