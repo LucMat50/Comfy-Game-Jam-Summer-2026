@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ccdrii5iqrulq"]
+
+[ext_resource type="Script" uid="uid://cxg1h2d1gr2oo" path="res://Scenes/level1/PathManager.gd" id="1_0kxt1"]
+
+[node name="PathManager" type="Node3D" unique_id=1794739927]
+script = ExtResource("1_0kxt1")
