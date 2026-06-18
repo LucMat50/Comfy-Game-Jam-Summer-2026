@@ -2,7 +2,9 @@ do StateManager.checkState("trail1GoLeft")
 if {stateTemp} == true:
 	Chencho (Happy): Wow! You sure know how to pick hiking trails. This place is beautiful.
 	Chud (Happy): Hehe, I know… I-I walked through there.
+	do StateManager.setNextScene("res://Scenes/level3/level3.tscn")
 do StateManager.checkState("trail1GoRight")
-	if {stateTemp} == true:
-		Chencho (Default): Ok, I think I’m on the right track again. This looks much better.
-		Chud (Default): See, I told you.
+if {stateTemp} == true:
+	Chencho (Default): Ok, I think I’m on the right track again. This looks much better.
+	Chud (Default): See, I told you.
+	do StateManager.setNextScene("res://Scenes/level3/level3.tscn")

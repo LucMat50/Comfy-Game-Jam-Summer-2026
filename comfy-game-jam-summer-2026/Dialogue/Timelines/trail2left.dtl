@@ -4,7 +4,9 @@ if {stateTemp} == true:
 	Chud (Worried): Uh… my bad man, I meant go right
 	Chencho (Tired): Are you kidding me?
 	Chud (Angry): What? It’s not like I’m leading you to hell. Just keep walking.
+	do StateManager.setNextScene("res://Scenes/badlevel3/badLevel3.tscn")
 do StateManager.checkState("trail1GoRight")
-	if {stateTemp} == true:
-		Chencho (Upset): Dude you sure you’re not dyslexic? I think I’m still on the wrong path.
-		Chud: Umm… Might be a possibility.
+if {stateTemp} == true:
+	Chencho (Upset): Dude you sure you’re not dyslexic? I think I’m still on the wrong path.
+	Chud: Umm… Might be a possibility.
+	do StateManager.setNextScene("res://Scenes/badlevel3/badLevel3.tscn")

@@ -5,21 +5,9 @@ if {stateTemp} == true:
 	Chencho (Default): Alright where to next? Right?
 	Chud (Default): If I remember correctly, you should take the path to the left.
 	Chencho (Happy): Bet.
-	[style name="DefaultStyle"]
-	CHOOSE A PATH
-	- LEFT
-		do StateManager.updateState("trail2GoLeft")
-	- RIGHT
-		do StateManager.updateState("trail2GoRight")
 do StateManager.checkState("trail1GoRight")
 if {stateTemp} == true:
 	Chencho (Tired): Ok man, tell me which way to go. And you better be right this time.
 	Chud (Default): I’m pretty sure you should go left.
 	Chencho (Upset): What do you mean pretty sure? Are you fully sure?
 	Chud (Worried): Uh… yea.
-	[style name="DefaultStyle"]
-	CHOOSE A PATH\:
-	- Left
-		do StateManager.updateState("trail2GoLeft")
-	- Right
-		do StateManager.updateState("trail2GoRight")
