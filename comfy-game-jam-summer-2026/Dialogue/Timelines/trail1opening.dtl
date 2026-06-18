@@ -2,9 +2,3 @@
 *ring ring*
 Chencho (Default): Hey, I’m at the first intersection. So uh… what do you say? Left?
 Chud (Default): Right.
-[style name="DefaultStyle"]
-CHOOSE A PATH
-- Left
-	do StateManager.updateState("trail1GoLeft")
-- Right
-	do StateManager.updateState("trail1GoRight")

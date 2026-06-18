@@ -107,6 +107,9 @@ func _physics_process(delta):
 		camera.fov = lerp(camera.fov, target_fov, delta * 8.0)
 		
 		move_and_slide()
+		
+		if StateManager.isCheckingStatePersistently():
+			isFacingAway()
 
 func _headbob(time) -> Vector3:
 	var pos = Vector3.ZERO
@@ -130,8 +133,7 @@ func isFacingAway() -> bool:
 	var head_path_angle = rad_to_deg(PATH_DIRECTION.angle_to(head_direction)) 
 	if(head_path_angle >= MAXIMUM_ANGLE_RANGE):
 		print("Is facing away from path pointing towards:", PATH_DIRECTION, "cannot move at angle: ", head_path_angle)
-		if StateManager.isCheckingStatePersistently():
-			StateManager.updateState("turnedAround")
+		StateManager.updateState("turnedAround")
 		return true
 	else:
 		return false
