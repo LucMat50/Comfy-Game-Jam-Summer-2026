@@ -7,3 +7,4 @@ Chud (Eyebrow): Just turn around.
 do StateManager.startPersistentStateCheck("turnedAround")
 Chencho (Tired): Uh… doesn’t seem like I can.
 Chud (Worried): It’s fine, there’s another intersection up ahead.
+do StateManager.setNextScene("res://Scenes/badlevel2/badLevel2.tscn")

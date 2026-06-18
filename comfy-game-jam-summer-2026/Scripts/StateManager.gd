@@ -12,6 +12,7 @@ var state_list = {
 
 var checkStatePersistently : bool = false
 var statePChecked : String
+var scene_to_change : String = ""
 
 func _process(_delta):
 	if checkStatePersistently:
@@ -46,3 +47,7 @@ func startPersistentStateCheck(state : String) -> void:
 	
 func isCheckingStatePersistently() -> bool:
 	return checkStatePersistently
+	
+func setNextScene(path : String) -> void:
+	scene_to_change = path
+	GameManager.player.fade_anim_player.play("fade_to_black")

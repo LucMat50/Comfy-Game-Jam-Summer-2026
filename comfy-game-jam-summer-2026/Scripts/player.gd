@@ -25,6 +25,7 @@ var gravity = 9.8
 @onready var camera = $Head/Camera3D
 @onready var footsteps: AudioStreamPlayer3D = $Footsteps
 @onready var breathing: AudioStreamPlayer3D = $Breathing
+@onready var fade_anim_player : AnimationPlayer = $CanvasLayer/Control/AnimationPlayer
 
 @onready var sprint_timer = $sprint_reduce_timer
 @onready var sprint_regen_timer = $sprint_regen_timer
@@ -40,6 +41,7 @@ func _ready():
 	sprint_timer.wait_time = 0.01
 	sprint_regen_timer.wait_time = 4
 	footsteps.volume_db = -50.0
+	fade_anim_player.play("fade_in")
 
 func _unhandled_input(event):
 	if can_accept_input and event is InputEventMouseMotion:
@@ -174,3 +176,7 @@ func _on_sprint_reduce_timer_timeout() -> void:
 
 func _on_sprint_regen_timer_timeout() -> void:
 	regen_stamina = true
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "fade_to_black":
+		GameManager.go_to_scene(StateManager.scene_to_change)
