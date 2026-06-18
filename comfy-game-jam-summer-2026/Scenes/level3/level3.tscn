@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c88j3oj0lf6om" path="res://demo/assets/textures/rock023_alb_ht.png" id="3_g1lxn"]
 [ext_resource type="Texture2D" uid="uid://c307hdmos4gtm" path="res://demo/assets/textures/rock023_nrm_rgh.png" id="4_ltjoi"]
 [ext_resource type="PackedScene" uid="uid://dt2uiveg7aevj" path="res://Assets/prefabs/assortedTrees.tscn" id="5_ltjoi"]
+[ext_resource type="PackedScene" uid="uid://crh56rx067nig" path="res://Assets/prefabs/assortedGrass.tscn" id="6_671qh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_g1lxn"]
 sky_top_color = Color(0.28645808, 0.45285547, 0.68526036, 1)
@@ -342,3 +343,72 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 143.
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 191.5, 103, 16)
 
 [node name="grass" type="Node3D" parent="." unique_id=178528316]
+
+[node name="AssortedGrass" parent="grass" unique_id=219442173 instance=ExtResource("6_671qh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 131, 21)
+
+[node name="AssortedGrass2" parent="grass" unique_id=388710665 instance=ExtResource("6_671qh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104, 131, 25)
+
+[node name="AssortedGrass3" parent="grass" unique_id=1857190704 instance=ExtResource("6_671qh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 150, 131, 27)
+
+[node name="AssortedGrass4" parent="grass" unique_id=1867917105 instance=ExtResource("6_671qh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 183, 131, 27)
+
+[node name="AssortedGrass5" parent="grass" unique_id=1350713971 instance=ExtResource("6_671qh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 229, 131, 29)
+
+[node name="AssortedGrass6" parent="grass" unique_id=629427264 instance=ExtResource("6_671qh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 147, 131, 70)
+
+[node name="AssortedGrass7" parent="grass" unique_id=1297499168 instance=ExtResource("6_671qh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 180, 131, 70)
+
+[node name="AssortedGrass8" parent="grass" unique_id=47438286 instance=ExtResource("6_671qh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 226, 131, 72)
+
+[node name="AssortedGrass9" parent="grass" unique_id=148943790 instance=ExtResource("6_671qh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 146, 131, 107)
+
+[node name="AssortedGrass10" parent="grass" unique_id=196289376 instance=ExtResource("6_671qh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 179, 131, 107)
+
+[node name="AssortedGrass11" parent="grass" unique_id=207352136 instance=ExtResource("6_671qh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 225, 131, 109)
+
+[node name="AssortedGrass12" parent="grass" unique_id=2070102242 instance=ExtResource("6_671qh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 226.5, 131, 125.5)
+
+[node name="AssortedGrass13" parent="grass" unique_id=1954131503 instance=ExtResource("6_671qh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 181.5, 131, 127.5)
+
+[node name="AssortedGrass14" parent="grass" unique_id=693760156 instance=ExtResource("6_671qh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 177.5, 131, 152.5)
+
+[node name="AssortedGrass15" parent="grass" unique_id=1048935563 instance=ExtResource("6_671qh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 157.5, 131, 146.5)
+
+[node name="AssortedGrass16" parent="grass" unique_id=1042208824 instance=ExtResource("6_671qh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 237.5, 131, 208.5)
+
+[node name="AssortedGrass17" parent="grass" unique_id=1635935561 instance=ExtResource("6_671qh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 148.5, 131, 224.5)
+
+[node name="AssortedGrass18" parent="grass" unique_id=739405222 instance=ExtResource("6_671qh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 109.5, 131, 223.5)
+
+[node name="AssortedGrass19" parent="grass" unique_id=764896911 instance=ExtResource("6_671qh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.5, 131, 226.5)
+
+[node name="AssortedGrass20" parent="grass" unique_id=1197799236 instance=ExtResource("6_671qh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.5, 131, 182.5)
+
+[node name="AssortedGrass21" parent="grass" unique_id=1268071418 instance=ExtResource("6_671qh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.5, 131, 187.5)
+
+[node name="AssortedGrass22" parent="grass" unique_id=788247007 instance=ExtResource("6_671qh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 67.5, 131, 138.5)
+
+[node name="AssortedGrass23" parent="grass" unique_id=211230783 instance=ExtResource("6_671qh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.5, 131, 98.5)
