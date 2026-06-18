@@ -98,6 +98,11 @@ normal_texture = ExtResource("4_ltjoi")
 mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_b2yd7")])
 texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_n3kcx"), SubResource("Terrain3DTextureAsset_671qh")])
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_671qh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mlo3y"]
+size = Vector3(200, 100, 1)
+
 [node name="Level3" type="Node3D" unique_id=1536706118]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1275337557]
@@ -412,3 +417,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 67.5, 131, 138.5)
 
 [node name="AssortedGrass23" parent="grass" unique_id=211230783 instance=ExtResource("6_671qh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.5, 131, 98.5)
+
+[node name="barrier" type="Node3D" parent="." unique_id=523119062]
+transform = Transform3D(0.2588191, 0, 0.96592593, 0, 1, 0, -0.96592593, 0, 0.2588191, 9, 75, 265)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="barrier" unique_id=245702007]
+physics_material_override = SubResource("PhysicsMaterial_671qh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="barrier/StaticBody3D" unique_id=1336229809]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 113, 0, 6)
+shape = SubResource("BoxShape3D_mlo3y")

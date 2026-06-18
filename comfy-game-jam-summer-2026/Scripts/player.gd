@@ -24,6 +24,7 @@ var gravity = 9.8
 @onready var head  = $Head
 @onready var camera = $Head/Camera3D
 @onready var footsteps: AudioStreamPlayer3D = $Footsteps
+@onready var breathing: AudioStreamPlayer3D = $Breathing
 
 @onready var sprint_timer = $sprint_reduce_timer
 @onready var sprint_regen_timer = $sprint_regen_timer
@@ -140,8 +141,12 @@ func isFacingAway() -> bool:
 	var head_path_angle = rad_to_deg(PATH_DIRECTION.angle_to(head_direction)) 
 	if(head_path_angle >= MAXIMUM_ANGLE_RANGE):
 		print("Is facing away from path pointing towards:", PATH_DIRECTION, "cannot move at angle: ", head_path_angle)
+		if !breathing.playing:
+			breathing.play()
 		return true
 	else:
+		if breathing.playing:
+			breathing.stop()
 		return false
 		
 #checks if player is going away from path direction by checking input
@@ -149,8 +154,13 @@ func isHeadingAway(player_direction: Vector3) -> bool:
 	var movement_angle = rad_to_deg(PATH_DIRECTION.angle_to(player_direction)) 
 	if(movement_angle >= MAXIMUM_ANGLE_RANGE):
 		print("Is heading away from path pointing towards: ", PATH_DIRECTION, "cannot move")
+		if !breathing.playing:
+			breathing.play()
 		return true
 	else:
+		
+		if breathing.playing:
+			breathing.stop()
 		return false
 
 func _on_sprint_reduce_timer_timeout() -> void:
