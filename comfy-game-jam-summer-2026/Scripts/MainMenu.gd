@@ -6,7 +6,7 @@ func _ready() -> void:
 		button.mouse_exited.connect(exit_hover.bind(button))
 
 func _on_play_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/level1/level1.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Cutscenes/opening.tscn")
 
 func _on_quit_button_pressed() -> void:
 	get_tree().quit()

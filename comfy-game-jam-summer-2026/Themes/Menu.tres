@@ -1,0 +1,27 @@
+[gd_resource type="Theme" format=3 uid="uid://dnfqkpt5wm2he"]
+
+[ext_resource type="FontFile" uid="uid://pwcab0wvwdrk" path="res://Dialogue/Jersey10-Regular.ttf" id="1_4knt0"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_4knt0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0ut50"]
+texture = SubResource("CanvasTexture_4knt0")
+modulate_color = Color(0.17254902, 0.6392157, 0.38039216, 1)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_bgegf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_37d6x"]
+texture = SubResource("CanvasTexture_bgegf")
+modulate_color = Color(9.62615e-08, 0.37936231, 0.17084828, 1)
+
+[resource]
+Button/fonts/font = ExtResource("1_4knt0")
+Label/fonts/font = ExtResource("1_4knt0")
+LineEdit/fonts/font = ExtResource("1_4knt0")
+ProgressBar/fonts/font = ExtResource("1_4knt0")
+TabBar/fonts/font = ExtResource("1_4knt0")
+TextEdit/fonts/font = ExtResource("1_4knt0")
+Tree/fonts/font = ExtResource("1_4knt0")
+Tree/fonts/title_button_font = ExtResource("1_4knt0")
+Tree/styles/button_hover = SubResource("StyleBoxTexture_0ut50")
+Tree/styles/focus = SubResource("StyleBoxTexture_37d6x")

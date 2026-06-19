@@ -1,7 +1,24 @@
 [gd_scene format=3 uid="uid://cxeuxto2ls2dc"]
 
 [ext_resource type="Script" uid="uid://buicknrwhg5vm" path="res://Scripts/PauseMenu.gd" id="1_n4i8v"]
-[ext_resource type="Texture2D" uid="uid://nh30qytew0qm" path="res://Assets/billboards/tree.webp" id="2_238ko"]
+[ext_resource type="Theme" uid="uid://dnfqkpt5wm2he" path="res://Themes/Menu.tres" id="2_238ko"]
+[ext_resource type="FontFile" uid="uid://pwcab0wvwdrk" path="res://Dialogue/Jersey10-Regular.ttf" id="3_2bpff"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_8hc20"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gdh0q"]
+texture = SubResource("CanvasTexture_8hc20")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_djuuc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_85qas"]
+texture = SubResource("CanvasTexture_djuuc")
+modulate_color = Color(0.09411765, 0.23921569, 0.36078432, 1)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_qjuxo"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ftuca"]
+texture = SubResource("CanvasTexture_qjuxo")
 
 [node name="PauseMenu" type="Control" unique_id=70648174]
 process_mode = 3
@@ -42,8 +59,10 @@ mouse_filter = 2
 [node name="Title" type="RichTextLabel" parent="TitleContinaer" unique_id=1481800157]
 layout_mode = 2
 mouse_filter = 2
+theme = ExtResource("2_238ko")
+theme_override_fonts/normal_font = ExtResource("3_2bpff")
 theme_override_font_sizes/normal_font_size = 70
-text = "Game Title"
+text = "PAUSE"
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -64,19 +83,24 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_constants/separation = 50
 
-[node name="PlayButton" type="TextureButton" parent="ButtonsContainer" unique_id=648130379]
+[node name="PlayButton" type="Button" parent="ButtonsContainer" unique_id=1773794922]
 custom_minimum_size = Vector2(200, 70)
 layout_mode = 2
-texture_normal = ExtResource("2_238ko")
-ignore_texture_size = true
-stretch_mode = 0
+theme = ExtResource("2_238ko")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_gdh0q")
+theme_override_styles/hover = SubResource("StyleBoxTexture_85qas")
+text = "RESUME"
 
-[node name="QuitButton" type="TextureButton" parent="ButtonsContainer" unique_id=376512847]
+[node name="QuitButton" type="Button" parent="ButtonsContainer" unique_id=1769583768]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
-texture_normal = ExtResource("2_238ko")
-ignore_texture_size = true
-stretch_mode = 0
+theme = ExtResource("2_238ko")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_ftuca")
+text = "QUIT"
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="pressed" from="ButtonsContainer/PlayButton" to="." method="_on_play_button_pressed"]
