@@ -29,6 +29,8 @@ func populatePaths() -> void:
 	
 func getPathTangent() -> Vector3:
 	var curve = currentPath.curve
+	if player.position == null:
+		push_error("Assign player component to the script in the editor") #drag player to PathManager property
 	var offset = curve.get_closest_offset(player.position)
 	return -curve.sample_baked_with_rotation(offset, true).basis.z
 
