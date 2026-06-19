@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://1fgkc1u76gf4"]
+
+[ext_resource type="Script" uid="uid://c7l0n3rvhpfmd" path="res://Scripts/audio_stream_player.gd" id="1_fbmny"]
+[ext_resource type="AudioStream" uid="uid://d057n2f4c3o8l" path="res://Assets/sounds/2026 Comfy Gamejam.wav" id="1_qxpp0"]
+
+[node name="Music" type="AudioStreamPlayer" unique_id=109551641]
+stream = ExtResource("1_qxpp0")
+volume_db = -5.821
+autoplay = true
+bus = &"Music"
+script = ExtResource("1_fbmny")
