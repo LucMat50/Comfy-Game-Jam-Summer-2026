@@ -3,6 +3,18 @@
 [ext_resource type="Texture2D" uid="uid://b08puvp0gtp6i" path="res://Assets/Cutscenes/BadEnding/BadEndingBackground.png" id="1_0fxjl"]
 [ext_resource type="Texture2D" uid="uid://wcpl0egbkpbr" path="res://Assets/Cutscenes/BadEnding/Hell1.png" id="2_hei1f"]
 [ext_resource type="Texture2D" uid="uid://d3i11cafi3v54" path="res://Assets/Cutscenes/BadEnding/Hell2.png" id="3_55u38"]
+[ext_resource type="Texture2D" uid="uid://b5l4ll1tw3q8y" path="res://Assets/Cutscenes/BadEnding/Come1.png" id="3_be0rk"]
+[ext_resource type="Texture2D" uid="uid://djhashqmt6q78" path="res://Assets/Cutscenes/BadEnding/Come2.png" id="4_0alsu"]
+[ext_resource type="Texture2D" uid="uid://bi7hfsc76dv6q" path="res://Assets/Cutscenes/BadEnding/fire1.png" id="5_yb0q5"]
+[ext_resource type="Texture2D" uid="uid://bg4nryhey1ldp" path="res://Assets/Cutscenes/BadEnding/fire2.png" id="6_xmxva"]
+[ext_resource type="Texture2D" uid="uid://b6ay66lbtsde0" path="res://Assets/Cutscenes/BadEnding/fire3.png" id="7_5gigq"]
+[ext_resource type="Texture2D" uid="uid://ca8otq8y3tmbu" path="res://Assets/Cutscenes/BadEnding/fire4.png" id="8_tqs6p"]
+[ext_resource type="Texture2D" uid="uid://bckg8ejtvas3u" path="res://Assets/Cutscenes/BadEnding/Guh1.png" id="9_cv8hi"]
+[ext_resource type="Texture2D" uid="uid://dvkwpikgbqm1k" path="res://Assets/Cutscenes/BadEnding/Guh2.png" id="10_ufx71"]
+[ext_resource type="Texture2D" uid="uid://j7c8dfgg3m5x" path="res://Assets/Cutscenes/BadEnding/NotJoking1.png" id="12_pmcj6"]
+[ext_resource type="Texture2D" uid="uid://c1scie2ld30gn" path="res://Assets/Cutscenes/BadEnding/NotJoking2.png" id="13_ut2fi"]
+[ext_resource type="Texture2D" uid="uid://dmgu7rw0q12ad" path="res://Assets/Cutscenes/BadEnding/Wut1.png" id="14_jobyg"]
+[ext_resource type="Texture2D" uid="uid://c7o2lu3w0h066" path="res://Assets/Cutscenes/BadEnding/Wut2.png" id="15_7ed6q"]
 
 [sub_resource type="Animation" id="Animation_j024o"]
 length = 0.001
@@ -17,6 +29,76 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [ExtResource("2_hei1f")]
+}
+
+[sub_resource type="Animation" id="Animation_a7jvg"]
+resource_name = "come"
+length = 0.500025
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("3_be0rk"), ExtResource("4_0alsu")]
+}
+
+[sub_resource type="Animation" id="Animation_he8s2"]
+resource_name = "fire"
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("5_yb0q5"), ExtResource("6_xmxva"), ExtResource("7_5gigq"), ExtResource("8_tqs6p")]
+}
+
+[sub_resource type="Animation" id="Animation_qrh6e"]
+resource_name = "fire_idle"
+length = 0.500025
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("7_5gigq"), ExtResource("8_tqs6p")]
+}
+
+[sub_resource type="Animation" id="Animation_ii61l"]
+resource_name = "guh"
+length = 0.500025
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("9_cv8hi"), ExtResource("10_ufx71")]
 }
 
 [sub_resource type="Animation" id="Animation_2dl4h"]
@@ -37,10 +119,52 @@ tracks/0/keys = {
 "values": [ExtResource("2_hei1f"), ExtResource("3_55u38")]
 }
 
+[sub_resource type="Animation" id="Animation_2hqxq"]
+resource_name = "not joking"
+length = 0.500025
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("12_pmcj6"), ExtResource("13_ut2fi")]
+}
+
+[sub_resource type="Animation" id="Animation_nvw6q"]
+resource_name = "wut"
+length = 0.500025
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("14_jobyg"), ExtResource("15_7ed6q")]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hdt7e"]
 _data = {
 &"RESET": SubResource("Animation_j024o"),
-&"hell": SubResource("Animation_2dl4h")
+&"come": SubResource("Animation_a7jvg"),
+&"fire": SubResource("Animation_he8s2"),
+&"fire_idle": SubResource("Animation_qrh6e"),
+&"guh": SubResource("Animation_ii61l"),
+&"hell": SubResource("Animation_2dl4h"),
+&"not joking": SubResource("Animation_2hqxq"),
+&"wut": SubResource("Animation_nvw6q")
 }
 
 [node name="Ending" type="Control" unique_id=957466747]
