@@ -1,3 +1,4 @@
+set {select} = true
 [style name="DefaultStyle"]
 *ring ring*
 do StateManager.checkState("trail1GoLeft")
@@ -11,3 +12,9 @@ if {stateTemp} == true:
 	Chud (Default): I’m pretty sure you should go left.
 	Chencho (Upset): What do you mean pretty sure? Are you fully sure?
 	Chud (Worried): Uh… yea.
+LEFT or RIGHT?
+- LEFT
+	do StateManager.setNextScene("res://Scenes/badlevel3/badLevel3.tscn")
+- RIGHT
+	do StateManager.setNextScene("res://Scenes/level3/level3.tscn")
+set {select} = false

@@ -27,3 +27,8 @@ if {stateTemp} == true:
 		Chud (Eyebrow): Nuh uh.
 		Chencho (Upset): Yuh huh.
 		Chud (Angry): Fine, don’t listen to me then.
+LEFT or RIGHT?
+- LEFT
+	do StateManager.setNextScene("res://Scenes/Cutscenes/bad_ending.tscn")
+- RIGHT
+	do StateManager.setNextScene("res://Scenes/Cutscenes/good_ending.tscn")
