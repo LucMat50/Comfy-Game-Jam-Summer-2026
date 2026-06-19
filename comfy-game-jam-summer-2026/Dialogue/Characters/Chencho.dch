@@ -13,7 +13,7 @@
 "pitch_base": 1.0,
 "pitch_variance": 0.0,
 "skip_characters": 0.0,
-"sound_path": "res://Dialogue/Sounds/chencho.wav",
+"sound_path": "res://Dialogue/Sounds/chencho/chencho.wav",
 "volume_base": 0.0,
 "volume_variance": 0.0
 }
@@ -35,7 +35,8 @@
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "",
+"sound_mood": "Chencho"
 },
 "Happy": {
 "export_overrides": {
@@ -44,7 +45,8 @@
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "",
+"sound_mood": "Chencho"
 },
 "Tired": {
 "export_overrides": {
@@ -53,7 +55,8 @@
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "",
+"sound_mood": "Chencho"
 },
 "Upset": {
 "export_overrides": {
@@ -62,7 +65,8 @@
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "",
+"sound_mood": "Chencho"
 }
 },
 &"scale": 1.0

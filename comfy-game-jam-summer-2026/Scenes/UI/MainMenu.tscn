@@ -4,6 +4,8 @@
 [ext_resource type="Theme" uid="uid://dnfqkpt5wm2he" path="res://Themes/Menu.tres" id="2_mjmdf"]
 [ext_resource type="Texture2D" uid="uid://buvnt6r5fsoi0" path="res://demo/assets/textures/GoodGrass.png" id="2_t6w0q"]
 [ext_resource type="FontFile" uid="uid://pwcab0wvwdrk" path="res://Dialogue/Jersey10-Regular.ttf" id="3_72sra"]
+[ext_resource type="AudioStream" uid="uid://c4mqj627gww3i" path="res://Assets/sounds/UISelect.mp3" id="5_jex3y"]
+[ext_resource type="AudioStream" uid="uid://dhc64j7dqoffv" path="res://Assets/sounds/UIHover.mp3" id="6_744d7"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_k8um8"]
 
@@ -111,6 +113,12 @@ theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxTexture_k8um8")
 theme_override_styles/hover = SubResource("StyleBoxTexture_744d7")
 text = "QUIT"
+
+[node name="Select" type="AudioStreamPlayer" parent="." unique_id=1138105590]
+stream = ExtResource("5_jex3y")
+
+[node name="Hover" type="AudioStreamPlayer" parent="." unique_id=907701447]
+stream = ExtResource("6_744d7")
 
 [connection signal="pressed" from="ButtonsContainer/ResumeButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="ButtonsContainer/QuitButton" to="." method="_on_quit_button_pressed"]

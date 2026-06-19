@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="ComfyGameJamSummer2026"
-run/main_scene="uid://cy3so2tai48ue"
+run/main_scene="uid://bqonspxxp0k4s"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -25,6 +25,7 @@ Dialogic="*uid://ds2q0uclmolvu"
 GameManager="*uid://ddty7dnsgeexj"
 StateManager="*uid://cfhio6ihmrral"
 Music="*uid://1fgkc1u76gf4"
+Ambience="*uid://l1ir8iuayb1n"
 
 [dialogic]
 
@@ -85,10 +86,10 @@ audio/channel_defaults={
 "loop": false,
 "volume": 0.0
 },
-"music": {
+"typing": {
 "audio_bus": "",
 "fade_length": 0.0,
-"loop": true,
+"loop": false,
 "volume": 0.0
 }
 }
@@ -99,6 +100,7 @@ variables={
 }
 animations/join_default="Bounce In"
 animations/leave_default="Bounce Out"
+audio/type_sound_bus="Music"
 
 [display]
 

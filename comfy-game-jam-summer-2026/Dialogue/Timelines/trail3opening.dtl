@@ -1,3 +1,4 @@
+set {select} = true
 [style name="DefaultStyle"]
 *ring *ring*
 do StateManager.checkState("trail2GoRight")
@@ -32,3 +33,4 @@ LEFT or RIGHT?
 	do StateManager.setNextScene("res://Scenes/Cutscenes/bad_ending.tscn")
 - RIGHT
 	do StateManager.setNextScene("res://Scenes/Cutscenes/good_ending.tscn")
+set {select} = false
