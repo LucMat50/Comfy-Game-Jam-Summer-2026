@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://rqvikyax6xj4"]
 
 [ext_resource type="PackedScene" uid="uid://bpqvb43q6v5oy" path="res://Scenes/player.tscn" id="1_av1ei"]
+[ext_resource type="Script" uid="uid://01pr32j1k3mt" path="res://Scripts/level_3.gd" id="1_mlo3y"]
 [ext_resource type="Texture2D" uid="uid://buvnt6r5fsoi0" path="res://demo/assets/textures/GoodGrass.png" id="2_fbmh2"]
 [ext_resource type="Texture2D" uid="uid://ds7lqxhkc1ip" path="res://demo/assets/textures/GoodPath.png" id="3_671qh"]
 [ext_resource type="Texture2D" uid="uid://c307hdmos4gtm" path="res://demo/assets/textures/rock023_nrm_rgh.png" id="4_ltjoi"]
@@ -104,6 +105,7 @@ texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_
 size = Vector3(200, 100, 1)
 
 [node name="Level3" type="Node3D" unique_id=1536706118]
+script = ExtResource("1_mlo3y")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1275337557]
 environment = SubResource("Environment_ltjoi")

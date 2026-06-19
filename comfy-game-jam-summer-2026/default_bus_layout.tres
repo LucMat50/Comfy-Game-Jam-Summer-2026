@@ -10,10 +10,13 @@ wet = 0.0
 [sub_resource type="AudioEffectDelay" id="AudioEffectDelay_j3pel"]
 resource_name = "Delay"
 tap1_active = false
+tap1_level_db = -36.0
 tap2_active = false
+tap2_level_db = -36.0
 
 [sub_resource type="AudioEffectLowPassFilter" id="AudioEffectLowPassFilter_j3pel"]
 resource_name = "LowPassFilter"
+cutoff_hz = 9000.0
 
 [resource]
 bus/1/name = &"Music"
