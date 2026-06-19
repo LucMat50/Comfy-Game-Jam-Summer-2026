@@ -3,7 +3,72 @@
 [ext_resource type="Script" uid="uid://krytxarald65" path="res://Scripts/good_ending.gd" id="1_f20u8"]
 [ext_resource type="Texture2D" uid="uid://fafyjjx03jbb" path="res://Assets/Cutscenes/GoodEnding/ChudBackground.png" id="1_vsuij"]
 [ext_resource type="Texture2D" uid="uid://cxboe4xhdkiw0" path="res://Assets/Cutscenes/GoodEnding/Beach1.png" id="2_f20u8"]
+[ext_resource type="Texture2D" uid="uid://bwekcb03nirjv" path="res://Assets/Cutscenes/GoodEnding/ChenchoBackground.png" id="3_hdajg"]
 [ext_resource type="Texture2D" uid="uid://dynrskm31cx1i" path="res://Assets/Cutscenes/GoodEnding/Beach2.png" id="3_stsjw"]
+[ext_resource type="Texture2D" uid="uid://8nb0p8lhopi6" path="res://Assets/Cutscenes/GoodEnding/Eating1.png" id="5_e84yv"]
+[ext_resource type="Texture2D" uid="uid://dmcdqe2f5jnvr" path="res://Assets/Cutscenes/GoodEnding/ChudLong1.png" id="5_wqpio"]
+[ext_resource type="Texture2D" uid="uid://byd5kvgha82so" path="res://Assets/Cutscenes/GoodEnding/ChudLong2.png" id="6_bl3pv"]
+[ext_resource type="Texture2D" uid="uid://cnt5d7dabc7ls" path="res://Assets/Cutscenes/GoodEnding/Eating2.png" id="6_hdajg"]
+[ext_resource type="Texture2D" uid="uid://d1f6op07sh48h" path="res://Assets/Cutscenes/GoodEnding/ChenchoHello1.png" id="7_nd42k"]
+[ext_resource type="Texture2D" uid="uid://bi0p700t8pbgg" path="res://Assets/Cutscenes/GoodEnding/ChenchoHello2.png" id="8_qqwyk"]
+[ext_resource type="Texture2D" uid="uid://bv1rtw1ll84rm" path="res://Assets/Cutscenes/GoodEnding/ChenchoSandwiches1.png" id="9_e84yv"]
+[ext_resource type="Texture2D" uid="uid://df5r20wcqf2tj" path="res://Assets/Cutscenes/GoodEnding/ChenchoSandwiches2.png" id="10_hdajg"]
+[ext_resource type="Texture2D" uid="uid://j2gh5di88qt7" path="res://Assets/Cutscenes/GoodEnding/ChudHello1.png" id="11_5jepd"]
+[ext_resource type="Texture2D" uid="uid://dp0sk1s8l2wc3" path="res://Assets/Cutscenes/GoodEnding/ChudHello2.png" id="12_bok13"]
+[ext_resource type="Texture2D" uid="uid://cd3kp8bwovqlc" path="res://Assets/Cutscenes/GoodEnding/ChudSandwiches1.png" id="13_nd42k"]
+[ext_resource type="Texture2D" uid="uid://bmmokerrl281c" path="res://Assets/Cutscenes/GoodEnding/ChudSandwiches2.png" id="14_qqwyk"]
+
+[sub_resource type="Animation" id="Animation_bok13"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_vsuij")]
+}
+
+[sub_resource type="Animation" id="Animation_bw1ts"]
+resource_name = "chencho"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_hdajg")]
+}
+
+[sub_resource type="Animation" id="Animation_s4ffj"]
+resource_name = "chud"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_vsuij")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r067n"]
+_data = {
+&"RESET": SubResource("Animation_bok13"),
+&"chencho": SubResource("Animation_bw1ts"),
+&"chud": SubResource("Animation_s4ffj")
+}
 
 [sub_resource type="Animation" id="Animation_yqfkp"]
 length = 0.001
@@ -38,10 +103,124 @@ tracks/0/keys = {
 "values": [ExtResource("2_f20u8"), ExtResource("3_stsjw")]
 }
 
+[sub_resource type="Animation" id="Animation_5jepd"]
+resource_name = "eating"
+length = 0.500025
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("5_e84yv"), ExtResource("6_hdajg")]
+}
+
+[sub_resource type="Animation" id="Animation_wolfb"]
+resource_name = "forever"
+length = 0.500025
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("5_wqpio"), ExtResource("6_bl3pv")]
+}
+
+[sub_resource type="Animation" id="Animation_6p1rf"]
+resource_name = "here"
+length = 0.500025
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("7_nd42k"), ExtResource("8_qqwyk")]
+}
+
+[sub_resource type="Animation" id="Animation_s55b2"]
+resource_name = "sandwiches"
+length = 0.500025
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("9_e84yv"), ExtResource("10_hdajg")]
+}
+
+[sub_resource type="Animation" id="Animation_onpln"]
+resource_name = "there"
+length = 0.500025
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("11_5jepd"), ExtResource("12_bok13")]
+}
+
+[sub_resource type="Animation" id="Animation_e84yv"]
+resource_name = "yur"
+length = 0.500025
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("13_nd42k"), ExtResource("14_qqwyk")]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ogkkw"]
 _data = {
 &"RESET": SubResource("Animation_yqfkp"),
-&"beach": SubResource("Animation_4kvwd")
+&"beach": SubResource("Animation_4kvwd"),
+&"eating": SubResource("Animation_5jepd"),
+&"forever": SubResource("Animation_wolfb"),
+&"here": SubResource("Animation_6p1rf"),
+&"sandwiches": SubResource("Animation_s55b2"),
+&"there": SubResource("Animation_onpln"),
+&"yur": SubResource("Animation_e84yv")
 }
 
 [node name="Good Ending" type="Control" unique_id=1281487117]
@@ -63,6 +242,7 @@ grow_vertical = 2
 texture = ExtResource("1_vsuij")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Background" unique_id=1734946625]
+libraries/ = SubResource("AnimationLibrary_r067n")
 
 [node name="Character" type="TextureRect" parent="." unique_id=1508948883]
 layout_mode = 1
