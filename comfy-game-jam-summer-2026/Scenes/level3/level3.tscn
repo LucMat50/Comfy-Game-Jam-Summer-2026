@@ -448,7 +448,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.599228, -30.250053, -26.0
 shape = SubResource("BoxShape3D_ohyoy")
 
 [node name="DialogueTrigger2" parent="." unique_id=1498974990 instance=ExtResource("8_ohyoy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 166, 0, 220.91135)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 192, 0, 220.91135)
 dialog_to_play = "trail3opening"
 
 [node name="CollisionShape3D" parent="DialogueTrigger2" index="0" unique_id=380274680]
