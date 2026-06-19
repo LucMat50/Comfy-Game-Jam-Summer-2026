@@ -20,3 +20,5 @@ func _on_dialogic_signal(argument: String):
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "fire":
 		animation.play("fire_idle")
+		await get_tree().create_timer(4).timeout
+		get_tree().change_scene_to_file("res://Scenes/UI/game_over.tscn")

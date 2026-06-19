@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://ca3sj33xhkw22"]
+
+[ext_resource type="Theme" uid="uid://dnfqkpt5wm2he" path="res://Themes/Menu.tres" id="1_jxkuk"]
+[ext_resource type="Script" uid="uid://dxbkl7oicci64" path="res://Scripts/game_over.gd" id="1_w88jv"]
+[ext_resource type="AudioStream" uid="uid://dhc64j7dqoffv" path="res://Assets/sounds/UIHover.mp3" id="3_ckxb7"]
+[ext_resource type="AudioStream" uid="uid://c4mqj627gww3i" path="res://Assets/sounds/UISelect.mp3" id="4_73uea"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_wpaxx"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_jqelu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w88jv"]
+texture = SubResource("CanvasTexture_jqelu")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ckxb7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_73uea"]
+texture = SubResource("CanvasTexture_ckxb7")
+
+[node name="GameOver" type="Control" unique_id=1922873951]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w88jv")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1473712013]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_wpaxx")
+
+[node name="HBoxContainer" type="VBoxContainer" parent="." unique_id=881281203]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -280.0
+offset_top = -107.5
+offset_right = 328.0
+offset_bottom = 154.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="HBoxContainer" unique_id=866475337]
+layout_mode = 2
+theme = ExtResource("1_jxkuk")
+text = "THE END"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Retry" type="Button" parent="HBoxContainer" unique_id=1734909810]
+layout_mode = 2
+theme = ExtResource("1_jxkuk")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.603248, 0.60324806, 0.60324913, 1)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxTexture_w88jv")
+text = "RETRY"
+
+[node name="Quit" type="Button" parent="HBoxContainer" unique_id=1179860033]
+layout_mode = 2
+theme = ExtResource("1_jxkuk")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.6039216, 0.6039216, 0.6039216, 1)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxTexture_73uea")
+text = "QUIT"
+
+[node name="Hover" type="AudioStreamPlayer" parent="." unique_id=1723961839]
+stream = ExtResource("3_ckxb7")
+
+[node name="Select" type="AudioStreamPlayer" parent="." unique_id=492841005]
+stream = ExtResource("4_73uea")
+
+[connection signal="pressed" from="HBoxContainer/Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="HBoxContainer/Quit" to="." method="_on_quit_pressed"]
