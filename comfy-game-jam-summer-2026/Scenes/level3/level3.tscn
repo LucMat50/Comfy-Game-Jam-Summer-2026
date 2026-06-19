@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dt2uiveg7aevj" path="res://Assets/prefabs/assortedTrees.tscn" id="5_ltjoi"]
 [ext_resource type="PackedScene" uid="uid://crh56rx067nig" path="res://Assets/prefabs/assortedGrass.tscn" id="6_671qh"]
 [ext_resource type="PackedScene" uid="uid://bj1isfnkyn77n" path="res://Scenes/dialogueTrigger.tscn" id="8_ohyoy"]
+[ext_resource type="Script" uid="uid://cxg1h2d1gr2oo" path="res://Scripts/PathManager.gd" id="9_wf47i"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_g1lxn"]
 sky_top_color = Color(0.28645808, 0.45285547, 0.68526036, 1)
@@ -110,6 +111,13 @@ size = Vector3(354.04337, 203.3584, 85.214905)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wf47i"]
 size = Vector3(112, 100, 117)
+
+[sub_resource type="Curve3D" id="Curve3D_a51kk"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 6.1671247, 75.3323, -115.06921, 0, 0, 0, 0, 0, 0, 10.89674, 67.18474, -100.586876, 0, 0, 0, 0, 0, 0, 26.495495, 42.344666, -44.51792, 0, 0, 0, 0, 0, 0, 35.592575, 30.26458, -17.19072, 0, 0, 0, 0, 0, 0, 40.75108, 15.013763, 17.309212, 0, 0, 0, 0, 0, 0, 46.970486, 0.93211746, 49.164276, 0, 0, 0, 0, 0, 0, 50.66142, -4.165783, 60.69659, 0, 0, 0, 0, 0, 0, 56.46196, -7.2082367, 67.57914, 0, 0, 0, 0, 0, 0, 64.92761, -7.52516, 68.29607, 0, 0, 0, 0, 0, 0, 72.92295, -5.1165504, 62.847385, 0, 0, 0, 0, 0, 0, 78.72349, -1.3768654, 54.38759, 0, 0, 0, 0, 0, 0, 95.580376, 11.718269, 24.764175, 0, 0, 0, 0, 0, 0, 113.18018, 24.170925, -3.405838, 0, 0, 0, 0, 0, 0, 122.56818, 41.23456, -42.006676, 0, 0, 0, 0, 0, 0, 131.0252, 55.800415, -74.957085, 0, 0, 0, 0, 0, 0, 142.87122, 59.632004, -83.624794, 0, 0, 0, 0, 0, 0, 167.24017, 62.368843, -89.816, 0, 0, 0, 0, 0, 0, 190.62738, 66.14393, -98.35586),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 18
 
 [node name="Level3" type="Node3D" unique_id=1536706118]
 script = ExtResource("1_mlo3y")
@@ -453,6 +461,14 @@ dialog_to_play = "trail3opening"
 [node name="CollisionShape3D" parent="DialogueTrigger2" index="0" unique_id=380274680]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.5, 29.5, -31)
 shape = SubResource("BoxShape3D_wf47i")
+
+[node name="PathManager" type="Node3D" parent="." unique_id=1790140217 node_paths=PackedStringArray("player")]
+transform = Transform3D(1, 0, 0, 0, -0.9146213, -0.40431163, 0, 0.40431163, -0.9146213, 0, 0, 94.6888)
+script = ExtResource("9_wf47i")
+player = NodePath("../Player")
+
+[node name="Path3D" type="Path3D" parent="PathManager" unique_id=898049326]
+curve = SubResource("Curve3D_a51kk")
 
 [editable path="DialogueTrigger"]
 [editable path="DialogueTrigger2"]
