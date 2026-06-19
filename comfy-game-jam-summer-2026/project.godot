@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="ComfyGameJamSummer2026"
-run/main_scene="uid://cqvmeyalv7k8"
+run/main_scene="uid://3p3tgdbvm8nx"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -25,7 +25,9 @@ StateManager="*uid://cfhio6ihmrral"
 
 directories/dch_directory={
 "Chencho": "res://Dialogue/Characters/Chencho.dch",
-"Chud": "res://Dialogue/Characters/Chud.dch"
+"Chud": "res://Dialogue/Characters/Chud.dch",
+"CutsceneChencho": "res://Dialogue/Characters/CutsceneChencho.dch",
+"CutsceneChud": "res://Dialogue/Characters/CutsceneChud.dch"
 }
 directories/dtl_directory={
 "TriggerTest": "res://Dialogue/Timelines/TriggerTest.dtl",
@@ -44,9 +46,11 @@ layout/style_directory={
 "": "res://Dialogue/Styles/ChenchoStyle.tres",
 "ChenchoStyle": "res://Dialogue/Styles/ChenchoStyle.tres",
 "ChudStyle": "res://Dialogue/Styles/ChudStyle.tres",
+"CutsceneChencho": "res://Dialogue/Styles/CutsceneChencho.tres",
+"CutsceneChud": "res://Dialogue/Styles/CutsceneChud.tres",
 "DefaultStyle": "res://Dialogue/Styles/DefaultStyle.tres"
 }
-layout/style_list=["res://Dialogue/Styles/ChenchoStyle.tres", "res://Dialogue/Styles/ChudStyle.tres", "res://Dialogue/Styles/DefaultStyle.tres"]
+layout/style_list=["res://Dialogue/Styles/ChenchoStyle.tres", "res://Dialogue/Styles/ChudStyle.tres", "res://Dialogue/Styles/DefaultStyle.tres", "res://Dialogue/Styles/CutsceneChud.tres", "res://Dialogue/Styles/CutsceneChencho.tres"]
 layout/default_style="res://Dialogue/Styles/ChenchoStyle.tres"
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
@@ -90,6 +94,12 @@ variables={
 }
 animations/join_default="Bounce In"
 animations/leave_default="Bounce Out"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=960
+window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
