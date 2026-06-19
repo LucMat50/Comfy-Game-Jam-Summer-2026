@@ -17,7 +17,8 @@ script = ExtResource("2_k1tcg")
 scene = ExtResource("1_7lf1g")
 overrides = {
 "global_bg_color": "Color(1, 1, 1, 1)",
-"global_font": "\"res://Dialogue/Jersey10-Regular.ttf\""
+"global_font": "\"res://Dialogue/Jersey10-Regular.ttf\"",
+"global_font_size": "30.0"
 }
 
 [sub_resource type="Resource" id="Resource_5eiii"]
@@ -45,7 +46,7 @@ overrides = {
 "next_indicator_show_on_questions": "false",
 "normal_font": "\"res://Dialogue/Jersey10-Regular.ttf\"",
 "text_custom_color": "Color(0.42745098, 0.49803922, 0.6392157, 1)",
-"text_size": "25.0",
+"text_size": "30.0",
 "text_use_global_color": "false",
 "text_use_global_font": "false",
 "text_use_global_size": "false"
@@ -59,13 +60,11 @@ scene = ExtResource("7_ypf8s")
 script = ExtResource("2_k1tcg")
 scene = ExtResource("8_ujg5m")
 overrides = {
-"boxes_stylebox_normal": "\"res://Dialogue/Boxes/DefaultStyleBox.tres\"",
 "font_custom": "\"res://Dialogue/Jersey10-Regular.ttf\"",
-"font_size_custom": "25.0",
+"font_size_custom": "30.0",
 "font_use_global": "false",
-"text_color_custom": "Color(0.42745098, 0.49803922, 0.6392157, 1)",
-"text_color_focused": "Color(0.15209998, 0.23140003, 0.39, 1)",
-"text_color_pressed": "Color(0.42745098, 0.49803922, 0.6392157, 1)",
+"text_color_custom": "Color(0.25768661, 0.33650455, 0.49414063, 1)",
+"text_color_pressed": "Color(0.25882354, 0.3372549, 0.49411765, 1)",
 "text_color_use_global": "false"
 }
 
