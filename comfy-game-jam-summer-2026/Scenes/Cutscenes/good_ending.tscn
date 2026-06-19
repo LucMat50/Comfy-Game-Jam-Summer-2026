@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://c4ko8kndn7r5x"]
+
+[ext_resource type="Script" uid="uid://krytxarald65" path="res://Scripts/good_ending.gd" id="1_f20u8"]
+[ext_resource type="Texture2D" uid="uid://fafyjjx03jbb" path="res://Assets/Cutscenes/GoodEnding/ChudBackground.png" id="1_vsuij"]
+[ext_resource type="Texture2D" uid="uid://cxboe4xhdkiw0" path="res://Assets/Cutscenes/GoodEnding/Beach1.png" id="2_f20u8"]
+[ext_resource type="Texture2D" uid="uid://dynrskm31cx1i" path="res://Assets/Cutscenes/GoodEnding/Beach2.png" id="3_stsjw"]
+
+[sub_resource type="Animation" id="Animation_yqfkp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_f20u8")]
+}
+
+[sub_resource type="Animation" id="Animation_4kvwd"]
+resource_name = "beach"
+length = 0.500025
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("2_f20u8"), ExtResource("3_stsjw")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ogkkw"]
+_data = {
+&"RESET": SubResource("Animation_yqfkp"),
+&"beach": SubResource("Animation_4kvwd")
+}
+
+[node name="Good Ending" type="Control" unique_id=1281487117]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f20u8")
+
+[node name="Background" type="TextureRect" parent="." unique_id=259572442]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_vsuij")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Background" unique_id=1734946625]
+
+[node name="Character" type="TextureRect" parent="." unique_id=1508948883]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_f20u8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Character" unique_id=727775877]
+libraries/ = SubResource("AnimationLibrary_ogkkw")
