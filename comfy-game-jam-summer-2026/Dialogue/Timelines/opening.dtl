@@ -7,4 +7,5 @@ CutsceneChud: Don’t worry, I’ve hiked this trail a thousand times, it’s pr
 CutsceneChud: Call me if you need help with any of the paths. You can’t always trust the trail markers.
 [signal arg="ChenchoTalk"]
 CutsceneChencho: Sounds good, see you there!
+[signal arg="ended"]
 [end_timeline]
