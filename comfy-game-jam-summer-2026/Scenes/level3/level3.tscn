@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dt2uiveg7aevj" path="res://Assets/prefabs/assortedTrees.tscn" id="5_ltjoi"]
 [ext_resource type="PackedScene" uid="uid://crh56rx067nig" path="res://Assets/prefabs/assortedGrass.tscn" id="6_671qh"]
 [ext_resource type="PackedScene" uid="uid://bj1isfnkyn77n" path="res://Scenes/dialogueTrigger.tscn" id="8_ohyoy"]
+[ext_resource type="Texture2D" uid="uid://bd4trhecoipec" path="res://Assets/billboards/TrailMarkerLeft.png" id="9_wf47i"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_g1lxn"]
 sky_top_color = Color(0.28645808, 0.45285547, 0.68526036, 1)
@@ -447,12 +448,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.599228, -30.250053, -26.0
 shape = SubResource("BoxShape3D_ohyoy")
 
 [node name="DialogueTrigger2" parent="." unique_id=1498974990 instance=ExtResource("8_ohyoy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 166, 0, 215)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 166, 0, 220.91135)
 dialog_to_play = "trail3opening"
 
 [node name="CollisionShape3D" parent="DialogueTrigger2" index="0" unique_id=380274680]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.5, 29.5, -31)
 shape = SubResource("BoxShape3D_wf47i")
+
+[node name="TrailMarker" type="Sprite3D" parent="." unique_id=1310171105]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 215.51852, 5.406147, 215.16371)
+billboard = 1
+texture = ExtResource("9_wf47i")
 
 [editable path="DialogueTrigger"]
 [editable path="DialogueTrigger2"]
