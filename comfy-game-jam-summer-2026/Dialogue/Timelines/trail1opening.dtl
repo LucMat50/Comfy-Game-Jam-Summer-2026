@@ -3,4 +3,9 @@ set {select} = true
 *ring ring*
 Chencho (Default): Hey, I’m at the first intersection. So uh… what do you say? Left?
 Chud (Default): Right.
+LEFT or RIGHT?
+- LEFT
+	do StateManager.setNextScene("res://Scenes/level2/level2.tscn")
+- RIGHT
+	do StateManager.setNextScene("res://Scenes/badlevel2/badLevel2.tscn")
 set {select} = false
