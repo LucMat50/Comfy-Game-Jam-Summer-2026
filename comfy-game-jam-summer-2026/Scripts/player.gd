@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+
 var speed
 var stamina
 const MAX_STAMINA = 100
@@ -58,6 +59,8 @@ func _process(_delta: float) -> void:
 		if sprint_stamina >= 100:
 			regen_stamina = false
 			
+	if Input.is_action_just_pressed("pause"):
+		$CanvasLayer/PauseMenu.enter_pause();
 
 func _physics_process(delta):
 	
