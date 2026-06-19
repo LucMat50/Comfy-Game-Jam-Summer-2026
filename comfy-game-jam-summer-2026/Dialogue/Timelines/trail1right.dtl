@@ -3,8 +3,10 @@ Chud (Eyebrow): Didn’t you go left?
 Chencho (Upset): Uh no, I went right like you told me to.
 Chud (Angry): Bro, I said right as in 'you’re correct'. Go left.
 Chencho (Tired): Oh.
+do GameManager.change_eyes_visbility(true)
 Chud (Eyebrow): Just turn around.
 do StateManager.startPersistentStateCheck("turnedAround")
 Chencho (Tired): Uh… doesn’t seem like I can.
+do GameManager.change_eyes_visbility(false)
 Chud (Worried): It’s fine, there’s another intersection up ahead.
 do StateManager.updateState("trail1GoRight")

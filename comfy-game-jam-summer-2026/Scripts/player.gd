@@ -27,6 +27,7 @@ var gravity = 9.8
 @onready var footsteps: AudioStreamPlayer3D = $Footsteps
 @onready var breathing: AudioStreamPlayer3D = $Breathing
 @onready var fade_anim_player : AnimationPlayer = $CanvasLayer/Control/AnimationPlayer
+@onready var eyes : Sprite3D = $Eyes
 
 @onready var sprint_timer = $sprint_reduce_timer
 @onready var sprint_regen_timer = $sprint_regen_timer
@@ -183,3 +184,4 @@ func _on_sprint_regen_timer_timeout() -> void:
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "fade_to_black":
 		GameManager.go_to_scene(StateManager.scene_to_change)
+	
