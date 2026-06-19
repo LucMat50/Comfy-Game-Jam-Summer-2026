@@ -86,10 +86,10 @@ audio/channel_defaults={
 "loop": false,
 "volume": 0.0
 },
-"music": {
+"typing": {
 "audio_bus": "",
 "fade_length": 0.0,
-"loop": true,
+"loop": false,
 "volume": 0.0
 }
 }
@@ -100,6 +100,7 @@ variables={
 }
 animations/join_default="Bounce In"
 animations/leave_default="Bounce Out"
+audio/type_sound_bus="Music"
 
 [display]
 
