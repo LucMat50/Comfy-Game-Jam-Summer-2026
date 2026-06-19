@@ -1,7 +1,12 @@
 extends AudioStreamPlayer
 
+var evil = 0.0 :
+	set(value):
+		evil = clamp(value, 0, 1)
+		set_evil_amount(evil)
+
 func _ready() -> void:
-	set_evil_amount(0)
+	set_evil_amount(0.0)
 
 func set_evil_amount(amount : float):
 	clamp(amount, 0, 1)

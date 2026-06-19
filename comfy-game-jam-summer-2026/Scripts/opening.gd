@@ -18,4 +18,4 @@ func _on_dialogic_signal(argument: String):
 		await get_tree().create_timer(1).timeout
 		animation.play("Beginning")
 		await get_tree().create_timer(1).timeout
-		get_tree().change_scene_to_file("res://Scenes/level1/level1.tscn")
+		GameManager.go_to_scene("res://Scenes/level1/level1.tscn")
