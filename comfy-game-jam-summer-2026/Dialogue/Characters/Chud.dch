@@ -6,16 +6,73 @@
 &"custom_info": {
 "prefix": "",
 "sound_mood_default": "",
-"sound_moods": {},
-"style": "",
+"sound_moods": {
+"Chud": {
+"mode": 1,
+"name": "Chud",
+"pitch_base": 1.0,
+"pitch_variance": 0.0,
+"skip_characters": 0.0,
+"sound_path": "res://Dialogue/Sounds/chud.wav",
+"volume_base": 0.0,
+"volume_variance": 0.0
+}
+},
+"style": "ChudStyle",
 "suffix": ""
 },
-&"default_portrait": "",
+&"default_portrait": "Default",
 &"description": "",
-&"display_name": "Chud",
+&"display_name": "CHUD",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
-&"portraits": {},
+&"portraits": {
+"Angry": {
+"export_overrides": {
+"image": "\"res://Dialogue/Characters/ChudAngry.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Default": {
+"export_overrides": {
+"image": "\"res://Dialogue/Characters/ChudDefault.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Eyebrow": {
+"export_overrides": {
+"image": "\"res://Dialogue/Characters/ChudEyeBrow.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Happy": {
+"export_overrides": {
+"image": "\"res://Dialogue/Characters/ChudHappy.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Worried": {
+"export_overrides": {
+"image": "\"res://Dialogue/Characters/ChudWorried.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
 &"scale": 1.0
 }

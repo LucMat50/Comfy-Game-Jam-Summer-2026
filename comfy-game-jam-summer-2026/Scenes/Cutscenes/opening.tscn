@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://3p3tgdbvm8nx"]
+
+[ext_resource type="Texture2D" uid="uid://dk3lqf7h1pkf5" path="res://Assets/Cutscenes/opening/OpeningBackground.png" id="1_jcvbm"]
+[ext_resource type="Script" uid="uid://c0bxgrc8btfog" path="res://Scripts/opening.gd" id="1_l7ai8"]
+[ext_resource type="Texture2D" uid="uid://b2kmgy285qr8s" path="res://Assets/Cutscenes/opening/ChudTalks1.png" id="2_22qj5"]
+[ext_resource type="Texture2D" uid="uid://ddqxnhumhvvi2" path="res://Assets/Cutscenes/opening/Beginning1.png" id="3_eqvst"]
+[ext_resource type="Texture2D" uid="uid://cn5r3d2fexjoa" path="res://Assets/Cutscenes/opening/ChenchoTalks1.png" id="3_gwggy"]
+[ext_resource type="Texture2D" uid="uid://cahamceu0wnaq" path="res://Assets/Cutscenes/opening/ChudTalks2.png" id="3_m5no4"]
+[ext_resource type="Texture2D" uid="uid://btg0ell48moum" path="res://Assets/Cutscenes/opening/ChenchoTalks2.png" id="4_jecf7"]
+
+[sub_resource type="Animation" id="Animation_ddjsr"]
+resource_name = "Beginning"
+length = 0.500025
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_eqvst")]
+}
+
+[sub_resource type="Animation" id="Animation_eqvst"]
+resource_name = "ChenchoTalks"
+length = 0.500025
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("3_gwggy"), ExtResource("4_jecf7")]
+}
+
+[sub_resource type="Animation" id="Animation_f222t"]
+resource_name = "ChudTalks"
+length = 0.500025
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("2_22qj5"), ExtResource("3_m5no4")]
+}
+
+[sub_resource type="Animation" id="Animation_gwggy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_22qj5")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jecf7"]
+_data = {
+&"Beginning": SubResource("Animation_ddjsr"),
+&"ChenchoTalks": SubResource("Animation_eqvst"),
+&"ChudTalks": SubResource("Animation_f222t"),
+&"RESET": SubResource("Animation_gwggy")
+}
+
+[node name="Opening" type="Control" unique_id=130173833]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l7ai8")
+
+[node name="Background" type="TextureRect" parent="." unique_id=402005112]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_jcvbm")
+stretch_mode = 4
+
+[node name="Character" type="TextureRect" parent="." unique_id=1803321739]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_22qj5")
+stretch_mode = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Character" unique_id=1327505016]
+libraries/ = SubResource("AnimationLibrary_jecf7")

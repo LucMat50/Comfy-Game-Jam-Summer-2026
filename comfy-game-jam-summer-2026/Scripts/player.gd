@@ -9,9 +9,9 @@ const SPRINT_SPEED = 8.0
 const JUMP_VELOCITY = 4.5
 const SENSITIVITY = 0.005
 
-var PATH_DIRECTION = Vector3(0 , 0, -1) #default path (forward)
+@export var PATH_DIRECTION = Vector3(0 , 0, -1) #default path (forward)
 var isLocked = false
-var MAXIMUM_ANGLE_RANGE = 95.0
+var MAXIMUM_ANGLE_RANGE = 95.0 #controls range of movement in front of player
 
 const BOB_FREQ = 2.0
 const BOB_AMP = 0.08
@@ -24,6 +24,9 @@ var gravity = 9.8
 
 @onready var head  = $Head
 @onready var camera = $Head/Camera3D
+@onready var footsteps: AudioStreamPlayer3D = $Footsteps
+@onready var breathing: AudioStreamPlayer3D = $Breathing
+@onready var fade_anim_player : AnimationPlayer = $CanvasLayer/Control/AnimationPlayer
 
 @onready var sprint_timer = $sprint_reduce_timer
 @onready var sprint_regen_timer = $sprint_regen_timer
@@ -38,6 +41,8 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	sprint_timer.wait_time = 0.01
 	sprint_regen_timer.wait_time = 4
+	footsteps.volume_db = -50.0
+	fade_anim_player.play("fade_in")
 
 func _unhandled_input(event):
 	if can_accept_input and event is InputEventMouseMotion:
@@ -47,7 +52,6 @@ func _unhandled_input(event):
 
 func _process(_delta: float) -> void:
 	#$"Head/Camera3D/SubViewport/HUD/Bottom HUD/Control/Sprint_Bar".value = sprint_stamina
-
 	#Handles regenerating stamina
 	if regen_stamina:
 		sprint_stamina += 0.2
@@ -59,8 +63,6 @@ func _process(_delta: float) -> void:
 		$CanvasLayer/PauseMenu.enter_pause();
 
 func _physics_process(delta):
-	
-	isFacingAway()
 	
 	# Add the gravity.
 	if not is_on_floor():
@@ -85,10 +87,22 @@ func _physics_process(delta):
 			speed = WALK_SPEED
 
 		# Get the input direction and handle the movement/deceleration.
-		# As good practice, you should replace UI actions with custom gameplay actions.
 		var input_dir = Input.get_vector("left", "right", "up", "down")
+		
+		#Footstep audio
+		var is_walking = input_dir != Vector2.ZERO and is_on_floor()
+		if is_walking:
+			if !footsteps.playing:
+				footsteps.play()
+		else:
+			if footsteps.playing:
+				footsteps.stop()
 		var direction = (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-		isHeadingAway(direction)
+		
+		if isHeadingAway(direction) or Dialogic.VAR.select:
+			direction = Vector3(0,0,0).normalized() #freeze player if is heading away
+			
+		
 		if is_on_floor():
 			if direction:
 				velocity.x = direction.x * speed
@@ -108,6 +122,10 @@ func _physics_process(delta):
 		camera.fov = lerp(camera.fov, target_fov, delta * 8.0)
 		
 		move_and_slide()
+		
+		if StateManager.isCheckingStatePersistently():
+			isFacingAway()
+	
 
 func _headbob(time) -> Vector3:
 	var pos = Vector3.ZERO
@@ -131,22 +149,37 @@ func isFacingAway() -> bool:
 	var head_path_angle = rad_to_deg(PATH_DIRECTION.angle_to(head_direction)) 
 	if(head_path_angle >= MAXIMUM_ANGLE_RANGE):
 		print("Is facing away from path pointing towards:", PATH_DIRECTION, "cannot move at angle: ", head_path_angle)
+		StateManager.updateState("turnedAround")
+
+		if !breathing.playing:
+			breathing.play()
+
 		return true
 	else:
+		if breathing.playing:
+			breathing.stop()
 		return false
 		
-#checks is player is going to non intended path by checking input
-func isHeadingAway(movementDirection: Vector3) -> bool:
-	var movement_angle = rad_to_deg(PATH_DIRECTION.angle_to(movementDirection)) 
+#checks if player is going away from path direction by checking input
+func isHeadingAway(player_direction: Vector3) -> bool:
+	var movement_angle = rad_to_deg(PATH_DIRECTION.angle_to(player_direction)) 
 	if(movement_angle >= MAXIMUM_ANGLE_RANGE):
 		print("Is heading away from path pointing towards: ", PATH_DIRECTION, "cannot move")
+		if !breathing.playing:
+			breathing.play()
 		return true
 	else:
+		
+		if breathing.playing:
+			breathing.stop()
 		return false
-
 
 func _on_sprint_reduce_timer_timeout() -> void:
 	sprint_stamina = sprint_stamina - 0.05
 
 func _on_sprint_regen_timer_timeout() -> void:
 	regen_stamina = true
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "fade_to_black":
+		GameManager.go_to_scene(StateManager.scene_to_change)

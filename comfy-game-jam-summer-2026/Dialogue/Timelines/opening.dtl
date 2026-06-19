@@ -1,0 +1,10 @@
+[signal arg="ChudTalk"]
+CutsceneChud: You ready for beach and sandwich day?
+[signal arg="ChenchoTalk"]
+CutsceneChencho: Yeah! All packed up and ready for the hike.
+[signal arg="ChudTalk"]
+CutsceneChud: Don’t worry, I’ve hiked this trail a thousand times, it’s pretty chill.
+CutsceneChud: Call me if you need help with any of the paths. You can’t always trust the trail markers.
+[signal arg="ChenchoTalk"]
+CutsceneChencho: Sounds good, see you there!
+[end_timeline]

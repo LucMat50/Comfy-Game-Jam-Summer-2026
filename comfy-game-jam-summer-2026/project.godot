@@ -15,22 +15,48 @@ run/main_scene="uid://bqonspxxp0k4s"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://djll3vguou3u"
+
 [autoload]
 
 Dialogic="*uid://ds2q0uclmolvu"
 GameManager="*uid://ddty7dnsgeexj"
+StateManager="*uid://cfhio6ihmrral"
+Music="*uid://1fgkc1u76gf4"
 
 [dialogic]
 
 directories/dch_directory={
-"Chud": "res://Dialogue/Characters/Chud.dch"
+"Chencho": "res://Dialogue/Characters/Chencho.dch",
+"Chud": "res://Dialogue/Characters/Chud.dch",
+"CutsceneChencho": "res://Dialogue/Characters/CutsceneChencho.dch",
+"CutsceneChud": "res://Dialogue/Characters/CutsceneChud.dch"
 }
 directories/dtl_directory={
-"TriggerTest": "res://Dialogue/Timelines/TriggerTest.dtl"
+"TriggerTest": "res://Dialogue/Timelines/TriggerTest.dtl",
+"opening": "res://Dialogue/Timelines/opening.dtl",
+"trail1left": "res://Dialogue/Timelines/trail1left.dtl",
+"trail1opening": "res://Dialogue/Timelines/trail1opening.dtl",
+"trail1right": "res://Dialogue/Timelines/trail1right.dtl",
+"trail2left": "res://Dialogue/Timelines/trail2left.dtl",
+"trail2opening": "res://Dialogue/Timelines/trail2opening.dtl",
+"trail2right": "res://Dialogue/Timelines/trail2right.dtl",
+"trail3left": "res://Dialogue/Timelines/trail3left.dtl",
+"trail3opening": "res://Dialogue/Timelines/trail3opening.dtl",
+"trail3right": "res://Dialogue/Timelines/trail3right.dtl"
 }
-layout/style_directory={}
-layout/style_list=[]
-layout/default_style="Default"
+layout/style_directory={
+"": "res://Dialogue/Styles/ChenchoStyle.tres",
+"ChenchoStyle": "res://Dialogue/Styles/ChenchoStyle.tres",
+"ChudStyle": "res://Dialogue/Styles/ChudStyle.tres",
+"CutsceneChencho": "res://Dialogue/Styles/CutsceneChencho.tres",
+"CutsceneChud": "res://Dialogue/Styles/CutsceneChud.tres",
+"DefaultStyle": "res://Dialogue/Styles/DefaultStyle.tres"
+}
+layout/style_list=["res://Dialogue/Styles/ChenchoStyle.tres", "res://Dialogue/Styles/ChudStyle.tres", "res://Dialogue/Styles/DefaultStyle.tres", "res://Dialogue/Styles/CutsceneChud.tres", "res://Dialogue/Styles/CutsceneChencho.tres"]
+layout/default_style="res://Dialogue/Styles/ChenchoStyle.tres"
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
@@ -68,8 +94,17 @@ audio/channel_defaults={
 }
 glossary/default_case_sensitive=true
 variables={
-"select": false
+"select": false,
+"stateTemp": false
 }
+animations/join_default="Bounce In"
+animations/leave_default="Bounce Out"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=960
+window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
@@ -122,6 +157,11 @@ dialogic_default_action={
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":32,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":88,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+]
+}
+"deploy hands"={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":72,"key_label":0,"unicode":104,"location":0,"echo":false,"script":null)
 ]
 }
 

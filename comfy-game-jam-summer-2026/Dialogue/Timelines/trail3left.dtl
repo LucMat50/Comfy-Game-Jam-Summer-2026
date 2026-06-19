@@ -1,0 +1,11 @@
+[signal arg="guh"]
+CutsceneChencho: Dude… I think I’m in hell.
+[signal arg="wut"]
+CutsceneChud: What the helly!?
+[signal arg="not joking"]
+CutsceneChencho: Bro I’m not joking, I think I’m in actual hell.
+[signal arg="come"]
+CutsceneChud: Wait there, I’ll come get you.
+[signal arg="ok"]
+CutsceneChencho: Ok.
+[end_timeline]

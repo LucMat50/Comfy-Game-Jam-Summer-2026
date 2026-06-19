@@ -1,0 +1,13 @@
+[style name="DefaultStyle"]
+*ring ring*
+do StateManager.checkState("trail1GoLeft")
+if {stateTemp} == true:
+	Chencho (Default): Alright where to next? Right?
+	Chud (Default): If I remember correctly, you should take the path to the left.
+	Chencho (Happy): Bet.
+do StateManager.checkState("trail1GoRight")
+if {stateTemp} == true:
+	Chencho (Tired): Ok man, tell me which way to go. And you better be right this time.
+	Chud (Default): I’m pretty sure you should go left.
+	Chencho (Upset): What do you mean pretty sure? Are you fully sure?
+	Chud (Worried): Uh… yea.

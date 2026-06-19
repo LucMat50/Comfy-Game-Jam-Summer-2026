@@ -1,14 +1,12 @@
 [gd_scene format=3 uid="uid://cqvmeyalv7k8"]
 
 [ext_resource type="PackedScene" uid="uid://bpqvb43q6v5oy" path="res://Scenes/player.tscn" id="1_a02cp"]
-[ext_resource type="Texture2D" uid="uid://nh30qytew0qm" path="res://Assets/billboards/tree.webp" id="2_5a7ea"]
 [ext_resource type="PackedScene" uid="uid://bj1isfnkyn77n" path="res://Scenes/dialogueTrigger.tscn" id="2_go701"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a02cp"]
 size = Vector3(50, 0.01, 50)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8j60k"]
-albedo_texture = ExtResource("2_5a7ea")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_a02cp"]
 size = Vector2(50, 50)
@@ -46,8 +44,3 @@ mesh = SubResource("BoxMesh_a02cp")
 
 [node name="DialogueTrigger" parent="." unique_id=1087363247 instance=ExtResource("2_go701")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.278667)
-
-[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1465165690]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.345232, 4.997098, 14.441626)
-billboard = 2
-texture = ExtResource("2_5a7ea")

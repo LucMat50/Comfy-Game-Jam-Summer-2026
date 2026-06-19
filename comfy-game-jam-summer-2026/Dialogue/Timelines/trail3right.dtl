@@ -1,0 +1,11 @@
+[signal arg="there"]
+CutsceneChud: There you are!
+[signal arg="forever"]
+CutsceneChud: You took forever to get over here.
+[signal arg="here"]
+CutsceneChencho: Well I’m here now.
+[signal arg="sandwiches"]
+CutsceneChencho: You got the sandwiches?
+[signal arg="yur"]
+CutsceneChud: Yur!
+[end_timeline]

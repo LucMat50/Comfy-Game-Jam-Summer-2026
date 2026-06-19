@@ -1,0 +1,212 @@
+[gd_scene format=3 uid="uid://dn1yx5gipd7ot"]
+
+[ext_resource type="Script" uid="uid://dwj55e3rdxjie" path="res://Scripts/dropThings.gd" id="1_eywgx"]
+[ext_resource type="Texture2D" uid="uid://cp4gna4qh64ib" path="res://Assets/billboards/trees/badTrees/BadTree1.webp" id="1_uwqy1"]
+[ext_resource type="Texture2D" uid="uid://c63phn401vdsh" path="res://Assets/billboards/trees/badTrees/BadTree2.png" id="2_eywgx"]
+[ext_resource type="Texture2D" uid="uid://dgvv1qwxsgrlw" path="res://Assets/billboards/trees/badTrees/BadTree3.png" id="3_jkbbw"]
+[ext_resource type="Texture2D" uid="uid://dg684yagy3gbw" path="res://Assets/billboards/trees/badTrees/BadTree4.png" id="4_u5loe"]
+[ext_resource type="Texture2D" uid="uid://eqgbb0lqwwuk" path="res://Assets/billboards/trees/badTrees/BadTree5.png" id="5_mds4r"]
+[ext_resource type="Texture2D" uid="uid://bq4ctb8n1mbmb" path="res://Assets/billboards/grass/badGrass/BadStuff1.webp" id="6_fjko2"]
+[ext_resource type="Texture2D" uid="uid://bho4jnp3ngg05" path="res://Assets/billboards/grass/badGrass/BadStuff2.webp" id="7_uuah5"]
+
+[node name="BadAssortment" type="Node3D" unique_id=1962933087]
+script = ExtResource("1_eywgx")
+
+[node name="BadTree1-1" type="Node3D" parent="." unique_id=1521178436]
+
+[node name="Sprite3D" type="Sprite3D" parent="BadTree1-1" unique_id=1707984262]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 0)
+billboard = 2
+texture = ExtResource("1_uwqy1")
+
+[node name="BadTree1-2" type="Node3D" parent="." unique_id=892879632]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 6)
+
+[node name="Sprite3D" type="Sprite3D" parent="BadTree1-2" unique_id=1829184086]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 0)
+billboard = 2
+texture = ExtResource("1_uwqy1")
+
+[node name="BadTree1-3" type="Node3D" parent="." unique_id=452600056]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -6)
+
+[node name="Sprite3D" type="Sprite3D" parent="BadTree1-3" unique_id=1120242765]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 0)
+billboard = 2
+texture = ExtResource("1_uwqy1")
+
+[node name="BadTree2-1" type="Node3D" parent="." unique_id=1629307785]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 7)
+
+[node name="Sprite3D" type="Sprite3D" parent="BadTree2-1" unique_id=2128849514]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 0)
+billboard = 2
+texture = ExtResource("2_eywgx")
+
+[node name="BadTree2-2" type="Node3D" parent="." unique_id=299804227]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -15)
+
+[node name="Sprite3D" type="Sprite3D" parent="BadTree2-2" unique_id=361923545]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 0)
+billboard = 2
+texture = ExtResource("2_eywgx")
+
+[node name="BadTree2-3" type="Node3D" parent="." unique_id=729685955]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -6)
+
+[node name="Sprite3D" type="Sprite3D" parent="BadTree2-3" unique_id=1444222642]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 0)
+billboard = 2
+texture = ExtResource("2_eywgx")
+
+[node name="BadTree3-1" type="Node3D" parent="." unique_id=1542825051]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -14)
+
+[node name="Sprite3D" type="Sprite3D" parent="BadTree3-1" unique_id=1525899015]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 0)
+billboard = 2
+texture = ExtResource("3_jkbbw")
+
+[node name="BadTree3-2" type="Node3D" parent="." unique_id=938409691]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 12)
+
+[node name="Sprite3D" type="Sprite3D" parent="BadTree3-2" unique_id=1972719829]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 0)
+billboard = 2
+texture = ExtResource("3_jkbbw")
+
+[node name="BadTree3-3" type="Node3D" parent="." unique_id=2142325742]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 3)
+
+[node name="Sprite3D" type="Sprite3D" parent="BadTree3-3" unique_id=1891691278]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 0)
+billboard = 2
+texture = ExtResource("3_jkbbw")
+
+[node name="BadTree4-1" type="Node3D" parent="." unique_id=1447963301]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -7)
+
+[node name="Sprite3D" type="Sprite3D" parent="BadTree4-1" unique_id=883203637]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 0)
+billboard = 2
+texture = ExtResource("4_u5loe")
+
+[node name="BadTree4-2" type="Node3D" parent="." unique_id=695142946]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -8)
+
+[node name="Sprite3D" type="Sprite3D" parent="BadTree4-2" unique_id=1687530884]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 0)
+billboard = 2
+texture = ExtResource("4_u5loe")
+
+[node name="BadTree4-3" type="Node3D" parent="." unique_id=142419176]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 2)
+
+[node name="Sprite3D" type="Sprite3D" parent="BadTree4-3" unique_id=1663820499]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 0)
+billboard = 2
+texture = ExtResource("4_u5loe")
+
+[node name="BadTree5-1" type="Node3D" parent="." unique_id=2025361705]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 10)
+
+[node name="Sprite3D" type="Sprite3D" parent="BadTree5-1" unique_id=756872925]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 0)
+billboard = 2
+texture = ExtResource("5_mds4r")
+
+[node name="BadTree5-2" type="Node3D" parent="." unique_id=957599340]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 6)
+
+[node name="Sprite3D" type="Sprite3D" parent="BadTree5-2" unique_id=1276103566]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 0)
+billboard = 2
+texture = ExtResource("5_mds4r")
+
+[node name="BadTree5-3" type="Node3D" parent="." unique_id=835295643]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+
+[node name="Sprite3D" type="Sprite3D" parent="BadTree5-3" unique_id=1040258079]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 0)
+billboard = 2
+texture = ExtResource("5_mds4r")
+
+[node name="BadGrass1-1" type="Node3D" parent="." unique_id=1140003196]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3)
+
+[node name="Sprite3D" type="Sprite3D" parent="BadGrass1-1" unique_id=1885494075]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 0)
+billboard = 2
+texture = ExtResource("6_fjko2")
+
+[node name="BadGrass1-2" type="Node3D" parent="." unique_id=1012194579]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -4)
+
+[node name="Sprite3D" type="Sprite3D" parent="BadGrass1-2" unique_id=1204135351]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 0)
+billboard = 2
+texture = ExtResource("6_fjko2")
+
+[node name="BadGrass1-3" type="Node3D" parent="." unique_id=1736661720]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -6)
+
+[node name="Sprite3D" type="Sprite3D" parent="BadGrass1-3" unique_id=2142244779]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 0)
+billboard = 2
+texture = ExtResource("6_fjko2")
+
+[node name="BadGrass1-4" type="Node3D" parent="." unique_id=1361569025]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 4)
+
+[node name="Sprite3D" type="Sprite3D" parent="BadGrass1-4" unique_id=926554083]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 0)
+billboard = 2
+texture = ExtResource("6_fjko2")
+
+[node name="BadGrass1-5" type="Node3D" parent="." unique_id=746980007]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -6)
+
+[node name="Sprite3D" type="Sprite3D" parent="BadGrass1-5" unique_id=1510693784]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 0)
+billboard = 2
+texture = ExtResource("6_fjko2")
+
+[node name="BadGrass2-1" type="Node3D" parent="." unique_id=1758979310]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="BadGrass2-1" unique_id=1653489867]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 0)
+billboard = 2
+texture = ExtResource("7_uuah5")
+
+[node name="BadGrass2-2" type="Node3D" parent="." unique_id=1776737555]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -3)
+
+[node name="Sprite3D" type="Sprite3D" parent="BadGrass2-2" unique_id=1680859834]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 0)
+billboard = 2
+texture = ExtResource("7_uuah5")
+
+[node name="BadGrass2-3" type="Node3D" parent="." unique_id=20713819]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 8)
+
+[node name="Sprite3D" type="Sprite3D" parent="BadGrass2-3" unique_id=1162226994]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 0)
+billboard = 2
+texture = ExtResource("7_uuah5")
+
+[node name="BadGrass2-4" type="Node3D" parent="." unique_id=1457597392]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -6)
+
+[node name="Sprite3D" type="Sprite3D" parent="BadGrass2-4" unique_id=42817780]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 0)
+billboard = 2
+texture = ExtResource("7_uuah5")
+
+[node name="BadGrass2-5" type="Node3D" parent="." unique_id=1173809469]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -10)
+
+[node name="Sprite3D" type="Sprite3D" parent="BadGrass2-5" unique_id=1568917186]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 0)
+billboard = 2
+texture = ExtResource("7_uuah5")

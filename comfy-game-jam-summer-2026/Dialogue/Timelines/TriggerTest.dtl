@@ -1,7 +1,17 @@
 set {select} = false
-Chud: This is a dialogue test.
-Chud: testing... 1, 2, 3
+Chencho (Default): This is a dialogue test.
+Chud (Default): testing... 1, 2, 3
 set {select} = true
-Chud: Left or right?
-- Left
-- Right
+[style name="DefaultStyle"]
+Left or right?
+- LEFT
+	do StateManager.updateState("testGoLeft")
+- RIGHT
+	do StateManager.updateState("testGoRight")
+set {select} = false
+do StateManager.checkState("testGoLeft")
+if {stateTemp} == true:
+	Went left.
+do StateManager.checkState("testGoRight")
+if {stateTemp} == true:
+	Went right.
