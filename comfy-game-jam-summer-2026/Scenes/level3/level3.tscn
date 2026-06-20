@@ -108,7 +108,7 @@ texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_
 size = Vector3(200, 100, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ohyoy"]
-size = Vector3(354.04337, 203.3584, 85.214905)
+size = Vector3(382.73895, 203.3584, 86.67581)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wf47i"]
 size = Vector3(97.365234, 100, 58.45398)
@@ -447,12 +447,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 113, 0, 6)
 shape = SubResource("BoxShape3D_mlo3y")
 
 [node name="DialogueTrigger" parent="." unique_id=1087363247 instance=ExtResource("8_ohyoy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.362339, 95.91414, 191.58118)
+transform = Transform3D(0.98220867, 0, -0.18779275, 0, 1, 0, 0.18779275, 0, 0.98220867, 27.451183, 97.91414, 196.87067)
 dialog_to_play = "trail2right"
 state_to_update = "trail2GoRight"
 
 [node name="CollisionShape3D" parent="DialogueTrigger" index="0" unique_id=380274680]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.599228, -30.250053, -26.014557)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.94702, -30.250053, -26.74501)
 shape = SubResource("BoxShape3D_ohyoy")
 
 [node name="DialogueTrigger2" parent="." unique_id=1498974990 instance=ExtResource("8_ohyoy")]
@@ -469,7 +469,6 @@ script = ExtResource("9_wf47i")
 player = NodePath("../Player")
 
 [node name="Path3D" type="Path3D" parent="PathManager" unique_id=1415134141]
-transform = Transform3D(1, 8.742277e-08, -8.742278e-08, -8.742278e-08, 1, -8.742278e-08, 8.742277e-08, 8.7422784e-08, 1, 0, 0, 0)
 curve = SubResource("Curve3D_wf47i")
 
 [node name="TrailMarker" type="Sprite3D" parent="." unique_id=564911431]
