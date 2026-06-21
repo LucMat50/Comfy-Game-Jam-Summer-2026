@@ -19,9 +19,10 @@ func _on_dialogic_signal(argument: String):
 		background_animation.play("chencho")
 	elif argument == "yur":
 		background_animation.play("chud")
-		
-	await Dialogic.timeline_ended
-	await get_tree().create_timer(2).timeout
-	character_animation.play("eating")
-	await get_tree().create_timer(4).timeout
-	get_tree().change_scene_to_file("res://Scenes/UI/game_over.tscn")
+		await Dialogic.timeline_ended
+		await get_tree().create_timer(2).timeout
+		character_animation.play("eating")
+		await get_tree().create_timer(4).timeout
+		get_tree().change_scene_to_file("res://Scenes/UI/game_over.tscn")
+	
+	

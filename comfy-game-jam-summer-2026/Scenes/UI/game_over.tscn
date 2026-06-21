@@ -12,10 +12,22 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w88jv"]
 texture = SubResource("CanvasTexture_jqelu")
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_w88jv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ckxb7"]
+texture = SubResource("CanvasTexture_w88jv")
+modulate_color = Color(0.72255445, 0.7225545, 0.7225545, 1)
+
 [sub_resource type="CanvasTexture" id="CanvasTexture_ckxb7"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_73uea"]
 texture = SubResource("CanvasTexture_ckxb7")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_73uea"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aqsr4"]
+texture = SubResource("CanvasTexture_73uea")
+modulate_color = Color(0.72156864, 0.72156864, 0.72156864, 1)
 
 [node name="GameOver" type="Control" unique_id=1922873951]
 layout_mode = 3
@@ -62,18 +74,18 @@ vertical_alignment = 1
 layout_mode = 2
 theme = ExtResource("1_jxkuk")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0.603248, 0.60324806, 0.60324913, 1)
 theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxTexture_w88jv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ckxb7")
 text = "RETRY"
 
 [node name="Quit" type="Button" parent="HBoxContainer" unique_id=1179860033]
 layout_mode = 2
 theme = ExtResource("1_jxkuk")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0.6039216, 0.6039216, 0.6039216, 1)
 theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxTexture_73uea")
+theme_override_styles/hover = SubResource("StyleBoxTexture_aqsr4")
 text = "QUIT"
 
 [node name="Hover" type="AudioStreamPlayer" parent="." unique_id=1723961839]
@@ -82,5 +94,7 @@ stream = ExtResource("3_ckxb7")
 [node name="Select" type="AudioStreamPlayer" parent="." unique_id=492841005]
 stream = ExtResource("4_73uea")
 
+[connection signal="mouse_entered" from="HBoxContainer/Retry" to="." method="_on_retry_mouse_entered"]
 [connection signal="pressed" from="HBoxContainer/Retry" to="." method="_on_retry_pressed"]
+[connection signal="mouse_entered" from="HBoxContainer/Quit" to="." method="_on_quit_mouse_entered"]
 [connection signal="pressed" from="HBoxContainer/Quit" to="." method="_on_quit_pressed"]
