@@ -55,7 +55,7 @@ layout/style_directory={
 "CutsceneChud": "res://Dialogue/Styles/CutsceneChud.tres",
 "DefaultStyle": "res://Dialogue/Styles/DefaultStyle.tres"
 }
-layout/style_list=["res://Dialogue/Styles/ChenchoStyle.tres", "res://Dialogue/Styles/DefaultStyle.tres", "res://Dialogue/Styles/CutsceneChud.tres", "res://Dialogue/Styles/CutsceneChencho.tres", "res://Dialogue/Styles/ChudStyle.tres"]
+layout/style_list=["res://Dialogue/Styles/ChenchoStyle.tres", "res://Dialogue/Styles/CutsceneChud.tres", "res://Dialogue/Styles/CutsceneChencho.tres", "res://Dialogue/Styles/ChudStyle.tres", "res://Dialogue/Styles/DefaultStyle.tres"]
 layout/default_style="res://Dialogue/Styles/DefaultStyle.tres"
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
