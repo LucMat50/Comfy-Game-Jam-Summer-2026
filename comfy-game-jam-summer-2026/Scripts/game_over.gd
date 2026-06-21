@@ -1,5 +1,8 @@
 extends Control
 
+func _ready() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
 func _on_retry_pressed() -> void:
 	$Select.play()
 	get_tree().change_scene_to_file("res://Scenes/Cutscenes/opening.tscn")
