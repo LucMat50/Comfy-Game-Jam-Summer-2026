@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ct63p0rqcbnw7"
-path="res://.godot/imported/ChenchoBox.png-244d0d97b65c76e2ede0603463d98dc6.ctex"
+path="res://.godot/imported/CharacterBox.png-9c19809153aca90f102c9e2185a43788.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Dialogue/Boxes/ChenchoBox.png"
-dest_files=["res://.godot/imported/ChenchoBox.png-244d0d97b65c76e2ede0603463d98dc6.ctex"]
+source_file="res://Dialogue/Boxes/CharacterBox.png"
+dest_files=["res://.godot/imported/CharacterBox.png-9c19809153aca90f102c9e2185a43788.ctex"]
 
 [params]
 

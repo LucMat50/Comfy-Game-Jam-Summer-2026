@@ -72,6 +72,8 @@ enum PivotModes {AT_ORIGIN, PERCENTAGE, PIXELS}
 	set(portrait):
 		debug_character_portrait = portrait
 		_update_debug_portrait_scene()
+		
+		
 
 var debug_character_holder_node: Node2D = null
 var debug_character_scene_node: Node = null

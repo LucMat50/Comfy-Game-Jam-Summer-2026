@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-run/main_scene="uid://ejuyegfpw65r"
+run/main_scene="uid://bqonspxxp0k4s"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -48,15 +48,15 @@ directories/dtl_directory={
 "trail3right": "res://Dialogue/Timelines/trail3right.dtl"
 }
 layout/style_directory={
-"": "res://Dialogue/Styles/ChenchoStyle.tres",
+"": "res://Dialogue/Styles/DefaultStyle.tres",
 "ChenchoStyle": "res://Dialogue/Styles/ChenchoStyle.tres",
 "ChudStyle": "res://Dialogue/Styles/ChudStyle.tres",
 "CutsceneChencho": "res://Dialogue/Styles/CutsceneChencho.tres",
 "CutsceneChud": "res://Dialogue/Styles/CutsceneChud.tres",
 "DefaultStyle": "res://Dialogue/Styles/DefaultStyle.tres"
 }
-layout/style_list=["res://Dialogue/Styles/ChenchoStyle.tres", "res://Dialogue/Styles/ChudStyle.tres", "res://Dialogue/Styles/DefaultStyle.tres", "res://Dialogue/Styles/CutsceneChud.tres", "res://Dialogue/Styles/CutsceneChencho.tres"]
-layout/default_style="res://Dialogue/Styles/ChenchoStyle.tres"
+layout/style_list=["res://Dialogue/Styles/ChenchoStyle.tres", "res://Dialogue/Styles/DefaultStyle.tres", "res://Dialogue/Styles/CutsceneChud.tres", "res://Dialogue/Styles/CutsceneChencho.tres", "res://Dialogue/Styles/ChudStyle.tres"]
+layout/default_style="res://Dialogue/Styles/DefaultStyle.tres"
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
@@ -64,11 +64,11 @@ text/text_reveal_skip_delay=0.1
 text/advance_delay=0.1
 text/autoadvance_per_character_delay=0.1
 text/autoadvance_ignored_characters_enabled=true
-animations/join_default_length=0.5
-animations/join_default_wait=true
-animations/leave_default_length=0.5
-animations/leave_default_wait=true
-animations/cross_fade_default_length=0.5
+animations/join_default_length=0.0
+animations/join_default_wait=false
+animations/leave_default_length=0.0
+animations/leave_default_wait=false
+animations/cross_fade_default_length=0.0
 choices/autofocus_first=true
 choices/delay=0.2
 choices/reveal_delay=0
