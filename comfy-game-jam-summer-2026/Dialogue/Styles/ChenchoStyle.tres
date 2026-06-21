@@ -15,7 +15,7 @@
 script = ExtResource("2_svey1")
 scene = ExtResource("1_4y0ln")
 overrides = {
-"global_bg_color": "Color(0.95686275, 0.62352943, 0.6392157, 1)",
+"global_bg_color": "Color(1, 1, 1, 1)",
 "global_font": "\"res://Dialogue/Jersey10-Regular.ttf\"",
 "global_font_color": "Color(0.6862745, 0.15686275, 0.32941177, 1)",
 "global_font_size": "30.0"

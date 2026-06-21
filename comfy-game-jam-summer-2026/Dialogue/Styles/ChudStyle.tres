@@ -7,7 +7,6 @@
 [sub_resource type="Resource" id="Resource_gjgus"]
 script = ExtResource("2_77esf")
 overrides = {
-"global_bg_color": "Color(0.9511719, 0.831719, 0.50159454, 1)",
 "global_font_color": "Color(0.7490196, 0.35686275, 0.16470589, 1)"
 }
 
@@ -19,6 +18,10 @@ script = ExtResource("2_77esf")
 
 [sub_resource type="Resource" id="Resource_a8n0l"]
 script = ExtResource("2_77esf")
+overrides = {
+"box_modulate_global_color": "false",
+"box_panel": "\"res://Dialogue/Boxes/ChudStyleBox.tres\""
+}
 
 [sub_resource type="Resource" id="Resource_f0x7p"]
 script = ExtResource("2_77esf")
