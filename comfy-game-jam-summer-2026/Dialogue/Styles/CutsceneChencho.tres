@@ -39,7 +39,8 @@ script = ExtResource("2_c6417")
 scene = ExtResource("6_mb73e")
 overrides = {
 "typing_sounds_mode": "1",
-"typing_sounds_sounds_folder": "\"res://Dialogue/Sounds/chencho\""
+"typing_sounds_sounds_folder": "\"res://Dialogue/Sounds/chencho\"",
+"typing_sounds_volume": "-15.0"
 }
 
 [sub_resource type="Resource" id="Resource_iyqp7"]
